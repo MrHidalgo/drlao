@@ -5,7 +5,7 @@
 //@import "_vendor/hamburger/_hamburgers";
 
 /// GENERATED
-//@import "_generated/spriteFont";
+@import "_generated/spriteFont";
 
 /// SHARED
 //@import "_shared/fonts";
@@ -14,11 +14,11 @@
 @import "_shared/common";
 //@import "_shared/magnificPopup";
 //@import "_shared/swiper";
-//@import "_shared/iconFont";
+@import "_shared/iconFont";
 
 /// MACROS
 //@import "_macros/hamburger";
-//@import "_macros/logotype";
+@import "_macros/logotype";
 //@import "_macros/title";
 //@import "_macros/subtitle";
 //@import "_macros/btn";

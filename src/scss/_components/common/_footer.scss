@@ -1,5 +1,163 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: #000000;
+  @include adaptive(767) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive(1023) {
+      flex-wrap: wrap;
+
+      &-left,
+      &-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      &-left {
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    @include adaptive(1023) {
+      align-items: center;
+      text-align: center;
+    }
+
+    li {
+      display: flex;
+
+      &:not(:last-of-type) {
+        padding-bottom: 25px;
+      }
+    }
+
+    a,
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #fff;
+      @include adaptive(767) {
+        font-size: 14px;
+      }
+    }
+
+    a {
+      @include hoverLink(#fff);
+    }
+  }
+
+  &__follow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+    @include adaptive(1023) {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 30px;
+    }
+
+    p {
+      padding-right: 40px;
+      font-weight: 300;
+      font-size: 15px;
+      color: #fff;
+      @include adaptive(1279) {
+        padding-right: 30px;
+      }
+      @include adaptive(1023) {
+        padding-right: 0;
+        padding-bottom: 25px;
+      }
+      @include adaptive(767) {
+        font-size: 14px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      @include adaptive(767) {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: calc(100% + 20px);
+      }
+
+      li {
+        display: flex;
+        @include adaptive(767) {
+          padding-left: 20px;
+          padding-bottom: 20px;
+        }
+
+        &:not(:last-of-type) {
+          padding-right: 20px;
+          @include adaptive(1279) {
+            padding-right: 15px;
+          }
+          @include adaptive(767) {
+            padding-right: 0;
+          }
+        }
+
+        a {
+          display: flex;
+
+          .icon-font {
+            font-size: 25px;
+            color: #d6ab49;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include adaptive(767) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    a,
+    span {
+      display: flex;
+      font-weight: 300;
+      font-size: 14px;
+      text-align: right;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    a {
+      @include hoverLink(#fff);
+    }
+
+    span {
+      padding-left: 5px;
+      padding-right: 5px;
+      @include adaptive(767) {
+        padding: 5px 0;
+      }
+    }
+  }
+}
 
 // FOOTER :: END

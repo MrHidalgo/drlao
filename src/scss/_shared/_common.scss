@@ -1,3 +1,22 @@
 // COMMON :: START
 
+.copyright,
+.made {
+  padding-bottom: 25px;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: right;
+  color: #fff;
+  @include adaptive(767) {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  a {
+    color: #ffffff;
+    font-weight: 700;
+    @include hoverLink(#fff);
+  }
+}
+
 // COMMON :: END

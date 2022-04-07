@@ -1,0 +1,121 @@
+@font-face {
+	font-family: "iconFont";
+	src: url('../fonts/iconFont.eot');
+	src: url('../fonts/iconFont.eot?#iefix') format('eot'),
+		url('../fonts/iconFont.woff2') format('woff2'),
+		url('../fonts/iconFont.woff') format('woff'),
+		url('../fonts/iconFont.ttf') format('truetype'),
+		url('../fonts/iconFont.svg#iconFont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconFont", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == facebook {
+		$char: "\E001";
+	}
+	@if $filename == follow-1 {
+		$char: "\E002";
+	}
+	@if $filename == follow-2 {
+		$char: "\E003";
+	}
+	@if $filename == follow-3 {
+		$char: "\E004";
+	}
+	@if $filename == follow-4 {
+		$char: "\E005";
+	}
+	@if $filename == instagram {
+		$char: "\E006";
+	}
+	@if $filename == is {
+		$char: "\E007";
+	}
+	@if $filename == line {
+		$char: "\E008";
+	}
+	@if $filename == linkedin {
+		$char: "\E009";
+	}
+	@if $filename == message {
+		$char: "\E00A";
+	}
+	@if $filename == youtube {
+		$char: "\E00B";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-facebook {
+	@include icon(facebook);
+
+}
+.icon-follow-1 {
+	@include icon(follow-1);
+
+}
+.icon-follow-2 {
+	@include icon(follow-2);
+
+}
+.icon-follow-3 {
+	@include icon(follow-3);
+
+}
+.icon-follow-4 {
+	@include icon(follow-4);
+
+}
+.icon-instagram {
+	@include icon(instagram);
+
+}
+.icon-is {
+	@include icon(is);
+
+}
+.icon-line {
+	@include icon(line);
+
+}
+.icon-linkedin {
+	@include icon(linkedin);
+
+}
+.icon-message {
+	@include icon(message);
+
+}
+.icon-youtube {
+	@include icon(youtube);
+
+}

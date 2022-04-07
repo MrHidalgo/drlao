@@ -2,7 +2,34 @@
 /// @group  Mixin
 ////
 
-/// 
+
+@mixin hoverLink($color) {
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: $color;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::before{
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+///
 /// Mixin setting the width and height element.
 ///
 /// @name   mixinDimensions
