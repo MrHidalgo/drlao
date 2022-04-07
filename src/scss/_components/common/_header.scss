@@ -1,5 +1,148 @@
 // HEADER :: START
 
-.header {}
+.header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  box-shadow: 0 5px 10px 0 rgba(#000, 0);
+  background-color: transparent;
+  @include transition(padding-top, padding-bottom, top, background-color);
+  @include adaptive(1365) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &.is-color {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 10px 0 rgba(#000, 0.05);
+    background-color: #ffffff;
+    @include transition(padding-top, padding-bottom, top, background-color);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-left,
+    &-right {
+      width: 100%;
+      max-width: 210px;
+      @include adaptive(1279) {
+        max-width: 200px;
+      }
+      @include adaptive(767) {
+        width: auto;
+        max-width: unset;
+      }
+    }
+
+    &-left {
+      @include adaptive(767) {
+        display: none;
+      }
+    }
+
+    &-middle {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      min-width: 1px;
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    p,
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      color: #000;
+      @include adaptive(1279) {
+        font-size: 14px;
+      }
+    }
+
+    a {
+      margin-top: 2px;
+      @include hoverLink(#000);
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 210px;
+    height: 60px;
+    padding: 20px 15px;
+    background-color: rgba(#000, 0.7);
+    @include adaptive(1279) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include adaptive(767) {
+      width: auto;
+      max-width: unset;
+      height: auto;
+      padding: 10px;
+    }
+
+    > div {
+      &:nth-child(1) {
+        flex: 1;
+        min-width: 1px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    @include adaptive(767) {
+      display: none;
+    }
+
+    a,
+    span {
+      font-weight: bold;
+      font-size: 14px;
+      color: #818181;
+    }
+
+    a {
+      @include hoverLink(#818181);
+      @include transition(color);
+
+      &.is-active {
+        color: #fff;
+      }
+
+      &:hover {
+        color: #ffffff;
+        @include transition(color);
+
+        &:before {
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    span {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
 
 // HEADER :: END

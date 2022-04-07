@@ -4,6 +4,15 @@
   display: flex;
   align-items: center;
 
+  &.logo--header {
+    @include adaptive(1279) {
+      max-width: 135px;
+    }
+    @include adaptive(767) {
+      max-width: 103px;
+    }
+  }
+
   &.logo--footer {
     padding-bottom: 50px;
   }
