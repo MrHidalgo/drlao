@@ -1,0 +1,33 @@
+// SECTION :: START
+
+section#reviews.reviews
+  .c-grid
+
+    p.reviews__label.c-label REAL PATIENTS
+    h2.reviews__title.c-title.c-title--center REAL REVIEWS
+
+  .reviews__carousel
+
+    .swiper
+      .swiper-wrapper
+        each val, idx in [1,2,3,4,5,6,7,8,9,0]
+          .swiper-slide
+
+            .reviews__box
+              p.reviews__box-desc.c-desc “My experience was great! I understood everything that was happening very well, you answered all questions and concerns, and you were very easy to reach when needed. I am so happy with my results. It’s been 3 weeks since my breast augmentation and I feel great and they look great!”
+              .reviews__box-rating
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+              p.reviews__box-from S, 18, Student, Hispanic, New York, USA
+
+    .swiper-pagination
+
+    a.reviews__carousel-btn.reviews__carousel-btn--prev(href="#")
+      i.icon-font.icon-arrow-left
+    a.reviews__carousel-btn.reviews__carousel-btn--next(href="#")
+      i.icon-font.icon-arrow-left
+
+// SECTION :: END

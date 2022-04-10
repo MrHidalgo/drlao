@@ -19,4 +19,28 @@
   }
 }
 
+.swiper {
+  &-pagination {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-bullet {
+      opacity: 1;
+      width: 9px;
+      height: 9px;
+      margin-left: 3px !important;
+      margin-right: 3px !important;
+      border-radius: 0;
+      border: 1px solid #d6ab49;
+      background-color: transparent;
+
+      &-active {
+        background-color: #d6ab49;
+      }
+    }
+  }
+}
+
 // COMMON :: END

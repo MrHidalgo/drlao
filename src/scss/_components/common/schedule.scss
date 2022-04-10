@@ -1,0 +1,45 @@
+// SECTION :: START
+
+.schedule {
+  position: relative;
+  background-image: url('../img/img-schedule-bg@2x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.7);
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// SECTION :: END

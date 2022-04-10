@@ -1,0 +1,45 @@
+// SECTION :: START
+
+.out {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 90px);
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    padding-top: 435px;
+
+    > div {
+      width: 58%;
+      padding: 110px 150px;
+      margin-left: auto;
+      background-color: rgba(#000, 0.7);
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__desc {
+    padding-bottom: 100px;
+  }
+}
+
+// SECTION :: END

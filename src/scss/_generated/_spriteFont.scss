@@ -27,38 +27,44 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == facebook {
+	@if $filename == arrow-left {
 		$char: "\E001";
 	}
-	@if $filename == follow-1 {
+	@if $filename == facebook {
 		$char: "\E002";
 	}
-	@if $filename == follow-2 {
+	@if $filename == follow-1 {
 		$char: "\E003";
 	}
-	@if $filename == follow-3 {
+	@if $filename == follow-2 {
 		$char: "\E004";
 	}
-	@if $filename == follow-4 {
+	@if $filename == follow-3 {
 		$char: "\E005";
 	}
-	@if $filename == instagram {
+	@if $filename == follow-4 {
 		$char: "\E006";
 	}
-	@if $filename == is {
+	@if $filename == instagram {
 		$char: "\E007";
 	}
-	@if $filename == line {
+	@if $filename == is {
 		$char: "\E008";
 	}
-	@if $filename == linkedin {
+	@if $filename == line {
 		$char: "\E009";
 	}
-	@if $filename == message {
+	@if $filename == linkedin {
 		$char: "\E00A";
 	}
-	@if $filename == youtube {
+	@if $filename == message {
 		$char: "\E00B";
+	}
+	@if $filename == star {
+		$char: "\E00C";
+	}
+	@if $filename == youtube {
+		$char: "\E00D";
 	}
 
 	@return $char;
@@ -75,6 +81,10 @@
 	}
 }
 
+.icon-arrow-left {
+	@include icon(arrow-left);
+
+}
 .icon-facebook {
 	@include icon(facebook);
 
@@ -113,6 +123,10 @@
 }
 .icon-message {
 	@include icon(message);
+
+}
+.icon-star {
+	@include icon(star);
 
 }
 .icon-youtube {

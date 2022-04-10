@@ -176,6 +176,42 @@ var Lang = function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (Lang);
 
+/***/ }),
+
+/***/ "./src/js/macros/reviews.js":
+/*!**********************************!*\
+  !*** ./src/js/macros/reviews.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Reviews = function () {
+  var init = function init() {
+    if (!$('.reviews__carousel .swiper').length) return;
+    new Swiper('.reviews__carousel .swiper', {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      speed: 1200,
+      navigation: {
+        nextEl: '.reviews__carousel-btn--next',
+        prevEl: '.reviews__carousel-btn--prev'
+      },
+      pagination: {
+        el: '.reviews__carousel .swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Reviews);
+
 /***/ })
 
 /******/ 	});
@@ -228,6 +264,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_lang__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/lang */ "./src/js/macros/lang.js");
 /* harmony import */ var _macros_hamburger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/hamburger */ "./src/js/macros/hamburger.js");
 /* harmony import */ var _macros_header_fixed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/header-fixed */ "./src/js/macros/header-fixed.js");
+/* harmony import */ var _macros_reviews__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/reviews */ "./src/js/macros/reviews.js");
+
 
 
 
@@ -241,6 +279,7 @@ window.addEventListener('load', function (ev) {
   _macros_lang__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _macros_hamburger__WEBPACK_IMPORTED_MODULE_2__["default"].init();
   _macros_header_fixed__WEBPACK_IMPORTED_MODULE_3__["default"].init();
+  _macros_reviews__WEBPACK_IMPORTED_MODULE_4__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 
