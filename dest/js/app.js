@@ -213,6 +213,56 @@ var Lang = function () {
 
 /***/ }),
 
+/***/ "./src/js/macros/medical.js":
+/*!**********************************!*\
+  !*** ./src/js/macros/medical.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Medical = function () {
+  var init = function init() {
+    if (!$('.medical__carousel .swiper')[0]) return;
+    new Swiper($('.medical__carousel .swiper')[0], {
+      loop: true,
+      speed: 1200,
+      slidesPerView: 'auto',
+      spaceBetween: 15,
+      slidesOffsetBefore: '400',
+      breakpoints: {
+        320: {
+          slidesOffsetBefore: '0'
+        },
+        1024: {
+          slidesOffsetBefore: '400'
+        }
+      },
+      navigation: {
+        nextEl: '.medical__carousel-btn--next',
+        prevEl: '.medical__carousel-btn--prev'
+      },
+      pagination: {
+        el: '.medical__carousel .swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      on: {
+        init: function init(swiper) {
+          swiper.$el[0].style.opacity = '1';
+        }
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Medical);
+
+/***/ }),
+
 /***/ "./src/js/macros/reviews.js":
 /*!**********************************!*\
   !*** ./src/js/macros/reviews.js ***!
@@ -331,6 +381,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_reviews__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/reviews */ "./src/js/macros/reviews.js");
 /* harmony import */ var _macros_smoothAnchorScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./macros/smoothAnchorScroll */ "./src/js/macros/smoothAnchorScroll.js");
 /* harmony import */ var _macros_gallery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./macros/gallery */ "./src/js/macros/gallery.js");
+/* harmony import */ var _macros_medical__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./macros/medical */ "./src/js/macros/medical.js");
+
 
 
 
@@ -349,6 +401,7 @@ window.addEventListener('load', function (ev) {
   _macros_header_fixed__WEBPACK_IMPORTED_MODULE_3__["default"].init();
   _macros_reviews__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _macros_smoothAnchorScroll__WEBPACK_IMPORTED_MODULE_5__["default"].init();
+  _macros_medical__WEBPACK_IMPORTED_MODULE_7__["default"].init();
   _macros_gallery__WEBPACK_IMPORTED_MODULE_6__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================

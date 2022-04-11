@@ -1,0 +1,21 @@
+---
+title: William Lao, MD | MEDICAL SPA
+
+pageClassName: p-medspa
+---
+extends shared/_layout
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('medspa', 'white', 'img-medspa-bg.jpg', 'MEDICAL SPA', ['home', '|', 'MEDSPA'], 'office')
+
+    include components/medspa/office
+    include components/medspa/dermatology
+    include components/medspa/medical
+
+    include components/common/out
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/patient-resources
+    include components/common/latest

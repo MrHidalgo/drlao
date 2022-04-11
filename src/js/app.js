@@ -6,6 +6,7 @@ import HeaderFixed from "./macros/header-fixed";
 import Reviews from "./macros/reviews";
 import AnchorScroll from "./macros/smoothAnchorScroll";
 import GalerryCB from "./macros/gallery";
+import Medical from "./macros/medical";
 
 
 // EVENT LISTENER - LOAD
@@ -22,7 +23,8 @@ window.addEventListener('load', (ev) => {
   Reviews.init();
   AnchorScroll.init();
 
-  GalerryCB.init()
+  Medical.init();
+  GalerryCB.init();
 
 }, false);
 

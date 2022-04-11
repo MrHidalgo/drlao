@@ -1,0 +1,180 @@
+// SECTION :: START
+
+.medical {
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 400px;
+  @include adaptive(1535) {
+    padding-top: 240px;
+  }
+  @include adaptive(1279) {
+    padding-top: 140px;
+  }
+  @include adaptive(767) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  &__bg {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 180px;
+    @include adaptive(767) {
+      padding-top: 75px;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      @include adaptive(1535) {
+        opacity: 0.45;
+      }
+    }
+  }
+
+  &__carousel {
+    z-index: 1;
+    position: absolute;
+    top: 270px;
+    right: 0;
+    width: calc(100% - ((100% / 2) - 400px));
+    margin-left: auto;
+    height: calc(100% - 270px);
+    @include adaptive(1023) {
+      position: static;
+      width: 100%;
+      padding-left: 20px;
+    }
+
+    .swiper {
+      opacity: 0;
+
+      &-slide {
+        opacity: 0.1;
+        position: relative;
+        display: flex;
+        width: 400px !important;
+        @include transition(opacity);
+        @include adaptive(1023) {
+          width: 350px !important;
+        }
+        @include adaptive(767) {
+          width: 75% !important;
+        }
+
+        &-active {
+          opacity: 1;
+          @include transition(opacity);
+        }
+
+        img {
+          @extend %imageResCoverAbs;
+          position: relative;
+        }
+
+        .c-btn {
+          &__wrapper {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+          }
+        }
+      }
+
+      &-pagination {
+        display: none;
+        margin-top: 50px;
+        @include adaptive(767) {
+          display: flex;
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border: 1px solid #caaa51;
+      background-color: #ffffff;
+      @include transition(background-color);
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+        padding-left: 415px;
+        @include adaptive(1023) {
+          justify-content: center;
+          padding-left: 0;
+          padding-right: 20px;
+        }
+        @include adaptive(767) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        background-color: #caaa51;
+        @include transition(background-color);
+
+        .icon-font {
+          color: #ffffff;
+          @include transition(color);
+        }
+      }
+
+      &--prev {
+        left: 23%;
+        margin-right: 10px;
+        @include adaptive(1365) {
+          left: 17%;
+        }
+      }
+
+      &--next {
+        right: 23%;
+        @include adaptive(1365) {
+          right: 17%;
+        }
+
+        .icon-font {
+          transform: scaleX(-1);
+        }
+      }
+
+      .icon-font {
+        font-size: 24px;
+        color: #000000;
+        @include transition(color);
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 3;
+    position: relative;
+    width: 100%;
+    max-width: 45%;
+    @include adaptive(1023) {
+      max-width: 100%;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 675px;
+  }
+}
+
+// SECTION :: END

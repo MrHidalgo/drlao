@@ -5,7 +5,7 @@
   margin-left: auto;
 }
 
-.main__bg img {
+.medical__carousel .swiper-slide img, .dermatology__bg img, .main__bg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2973,4 +2973,410 @@ picture {
   font-weight: 500;
   font-size: 16px;
   color: #fff;
+}
+
+.office {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+@media screen and (max-width: 1535px) {
+  .office {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .office {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.office__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 140px;
+}
+.office__bg svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1535px) {
+  .office__bg svg {
+    opacity: 0.45;
+  }
+}
+.office__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .office__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .office__wrapper-left, .office__wrapper-right {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .office__wrapper-left, .office__wrapper-right {
+    display: none;
+  }
+}
+.office__wrapper-left img, .office__wrapper-right img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1279px) {
+  .office__wrapper-left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .office__wrapper-right {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+.office__wrapper-middle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media screen and (max-width: 1279px) {
+  .office__wrapper-middle {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .office__wrapper-middle {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.office__title {
+  padding-bottom: 20px;
+}
+.office__desc {
+  width: 100%;
+  max-width: 675px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.office__desc:not(:last-of-type) {
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .office__desc:not(:last-of-type) {
+    padding-bottom: 25px;
+  }
+}
+
+.dermatology {
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 1535px) {
+  .dermatology {
+    padding-top: 240px;
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .dermatology {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dermatology {
+    padding-top: 100px;
+  }
+}
+.dermatology__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.dermatology__wrapper {
+  z-index: 2;
+  position: relative;
+}
+.dermatology__wrapper > div {
+  width: 100%;
+  max-width: 677px;
+  padding: 70px 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 767px) {
+  .dermatology__wrapper > div {
+    padding: 50px 20px;
+  }
+}
+.dermatology__label {
+  color: #ffffff;
+  text-align: left;
+}
+.dermatology__title {
+  padding-bottom: 20px;
+}
+.dermatology__desc {
+  padding-right: 30px;
+  padding-bottom: 100px;
+  color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .dermatology__desc {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.medical {
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 400px;
+}
+@media screen and (max-width: 1535px) {
+  .medical {
+    padding-top: 240px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .medical {
+    padding-top: 140px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .medical {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+.medical__bg {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 180px;
+}
+@media screen and (max-width: 767px) {
+  .medical__bg {
+    padding-top: 75px;
+  }
+}
+.medical__bg svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1535px) {
+  .medical__bg svg {
+    opacity: 0.45;
+  }
+}
+.medical__carousel {
+  z-index: 1;
+  position: absolute;
+  top: 270px;
+  right: 0;
+  width: calc(100% - (50% - 400px));
+  margin-left: auto;
+  height: calc(100% - 270px);
+}
+@media screen and (max-width: 1023px) {
+  .medical__carousel {
+    position: static;
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+.medical__carousel .swiper {
+  opacity: 0;
+}
+.medical__carousel .swiper-slide {
+  opacity: 0.1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px !important;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+@media screen and (max-width: 1023px) {
+  .medical__carousel .swiper-slide {
+    width: 350px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .medical__carousel .swiper-slide {
+    width: 75% !important;
+  }
+}
+.medical__carousel .swiper-slide-active {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.medical__carousel .swiper-slide img {
+  position: relative;
+}
+.medical__carousel .swiper-slide .c-btn__wrapper {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.medical__carousel .swiper-pagination {
+  display: none;
+  margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .medical__carousel .swiper-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.medical__carousel-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #caaa51;
+  background-color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.medical__carousel-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+  padding-left: 415px;
+}
+@media screen and (max-width: 1023px) {
+  .medical__carousel-btn-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .medical__carousel-btn-wrapper {
+    display: none;
+  }
+}
+.medical__carousel-btn:hover {
+  background-color: #caaa51;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.medical__carousel-btn:hover .icon-font {
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.medical__carousel-btn--prev {
+  left: 23%;
+  margin-right: 10px;
+}
+@media screen and (max-width: 1365px) {
+  .medical__carousel-btn--prev {
+    left: 17%;
+  }
+}
+.medical__carousel-btn--next {
+  right: 23%;
+}
+@media screen and (max-width: 1365px) {
+  .medical__carousel-btn--next {
+    right: 17%;
+  }
+}
+.medical__carousel-btn--next .icon-font {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+.medical__carousel-btn .icon-font {
+  font-size: 24px;
+  color: #000000;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.medical__wrapper {
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  max-width: 45%;
+}
+@media screen and (max-width: 1023px) {
+  .medical__wrapper {
+    max-width: 100%;
+    padding-bottom: 50px;
+  }
+}
+.medical__title {
+  padding-bottom: 20px;
+}
+.medical__desc {
+  width: 100%;
+  max-width: 675px;
 }
