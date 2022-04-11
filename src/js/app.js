@@ -4,7 +4,8 @@ import Lang from "./macros/lang";
 import Hamburger from "./macros/hamburger";
 import HeaderFixed from "./macros/header-fixed";
 import Reviews from "./macros/reviews";
-import anchorScroll from "./macros/smoothAnchorScroll";
+import AnchorScroll from "./macros/smoothAnchorScroll";
+import GalerryCB from "./macros/gallery";
 
 
 // EVENT LISTENER - LOAD
@@ -19,7 +20,9 @@ window.addEventListener('load', (ev) => {
   Hamburger.init();
   HeaderFixed.init();
   Reviews.init();
-  anchorScroll.init();
+  AnchorScroll.init();
+
+  GalerryCB.init()
 
 }, false);
 

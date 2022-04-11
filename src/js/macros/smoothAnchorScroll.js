@@ -1,4 +1,4 @@
-const anchorScroll = (function() {
+const AnchorScroll = (function() {
   const init = function() {
 
     if(!$('[anchor-js]').length) return;
@@ -22,4 +22,4 @@ const anchorScroll = (function() {
 
 })();
 
-export default anchorScroll;
+export default AnchorScroll;

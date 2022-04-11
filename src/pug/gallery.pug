@@ -1,0 +1,22 @@
+---
+title: William Lao, MD | Gallery
+
+pageClassName: p-gallery
+---
+extends shared/_layout
+
+block header
+  include components/common/_header--white
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('gallery', 'black', 'img-gallery-bg.jpg', 'GALLERY', ['HOME', '|', 'GALLERY'], 'gallery')
+
+    include components/gallery/gallery
+
+    include components/common/out
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/patient-resources
+    include components/common/latest

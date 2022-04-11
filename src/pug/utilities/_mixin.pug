@@ -16,13 +16,14 @@ mixin mainSection(classMod, gradientMod, img, title, breadcrumbsArr, anchorID)
           h1.main__title.c-title.c-title--medium.c-title--center!= title
       else
         .main__content
-          .main__breadcrumbs
-            each val, idx in breadcrumbsArr
-              if(idx === breadcrumbsArr.length - 1)
-                p!= val
-              else
-                a(href="#")!= val
-          h1.main__title.c-title.c-title--medium.c-title--center!= title
+          .main__breadcrumbs-wrapper
+            .main__breadcrumbs
+              each val, idx in breadcrumbsArr
+                if(idx === breadcrumbsArr.length - 1)
+                  p!= val
+                else
+                  a(href="#")!= val
+          h1.main__title.c-title.c-title--medium.c-title--center(class!= (gradientMod == 'black')?'main__title--white':'')!= title
 
       .main__btn
         a(href!= "#" + anchorID anchor-js)

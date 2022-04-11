@@ -16,6 +16,54 @@
     padding-bottom: 20px;
   }
 
+  &.header--white {
+    &.is-color {
+      .header {
+        &__info {
+          p,
+          a {
+            color: #000;
+          }
+
+          a {
+            @include hoverLink(#000);
+          }
+        }
+      }
+
+      .logo {
+        img {
+          display: none;
+
+          & + img {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .header {
+      &__info {
+        p,
+        a {
+          color: #ffffff;
+        }
+
+        a {
+          @include hoverLink(#fff);
+        }
+      }
+    }
+
+    .logo {
+      img {
+        & + img {
+          display: none;
+        }
+      }
+    }
+  }
+
   &.is-color {
     padding-top: 20px;
     padding-bottom: 20px;

@@ -41,13 +41,10 @@ const HeaderFixed = (function() {
           elTop = parseInt($($element[i]).css('top')) + wScrollDiff;
 
           if (wScrollCurrent <= 0) {
-            console.log(`if`);
             $($element[i]).css('top', 0).removeClass('is-hide');
           } else if (wScrollDiff > 0) {
-            console.log(`else if 1`);
             $($element[i]).css('top', 0).removeClass('is-hide');
           } else if (wScrollDiff < 0) {
-            console.log(`else if 2`);
             if (wScrollCurrent + wHeight >= dHeight - elHeight) {
               // $($element[i]).css('top', (elTop = wScrollCurrent + wHeight - dHeight) < 0 ? elTop : 0);
             } else {
