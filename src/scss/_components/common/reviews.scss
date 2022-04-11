@@ -3,9 +3,20 @@
 .reviews {
   padding-top: 90px;
   padding-bottom: 180px;
+  @include adaptive(1535) {
+    padding-top: 70px;
+    padding-bottom: 140px;
+  }
+  @include adaptive(1279) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
 
   &__title {
     padding-bottom: 90px;
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
   }
 
   &__box {
@@ -16,6 +27,10 @@
     max-width: 536px;
     margin-left: auto;
     margin-right: auto;
+    @include adaptive(767) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 
     &-desc {
       padding-bottom: 30px;
@@ -40,6 +55,9 @@
       letter-spacing: 0.2em;
       text-align: center;
       color: #000;
+      @include adaptive(767) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -48,12 +66,29 @@
 
     .swiper {
       &-slide {
+        opacity: 0.25;
         width: 50% !important;
+        @include transition(opacity);
+        @include adaptive(1365) {
+          width: 60% !important;
+        }
+        @include adaptive(1023) {
+          width: 80% !important;
+        }
+        @include adaptive(767) {
+          width: 100% !important;
+        }
+
+        &-active {
+          opacity: 1;
+          @include transition(opacity);
+        }
       }
 
       &-pagination {
         display: none;
-        @include adaptive(767) {
+        margin-top: 50px;
+        @include adaptive(1279) {
           display: flex;
         }
       }
@@ -71,13 +106,33 @@
       height: 80px;
       border: 1px solid #caaa51;
       background-color: #ffffff;
+      @include transition(background-color);
+      @include adaptive(1279) {
+        display: none;
+      }
+
+      &:hover {
+        background-color: #caaa51;
+        @include transition(background-color);
+
+        .icon-font {
+          color: #ffffff;
+          @include transition(color);
+        }
+      }
 
       &--prev {
         left: 23%;
+        @include adaptive(1365) {
+          left: 17%;
+        }
       }
 
       &--next {
         right: 23%;
+        @include adaptive(1365) {
+          right: 17%;
+        }
 
         .icon-font {
           transform: scaleX(-1);
@@ -87,6 +142,7 @@
       .icon-font {
         font-size: 24px;
         color: #000000;
+        @include transition(color);
       }
     }
   }

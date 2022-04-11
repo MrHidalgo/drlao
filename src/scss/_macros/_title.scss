@@ -3,9 +3,27 @@
 .c-title {
   font-weight: 500;
   font-size: 90px;
-  line-height: 90px;
+  line-height: 1.1;
   text-transform: uppercase;
   color: #000;
+  @include adaptive(1799) {
+    font-size: 75px;
+  }
+  @include adaptive(1535) {
+    font-size: 60px;
+  }
+  @include adaptive(1439) {
+    font-size: 50px;
+  }
+  @include adaptive(1279) {
+    font-size: 45px;
+  }
+  @include adaptive(767) {
+    font-size: 40px;
+  }
+  @include adaptive(575) {
+    font-size: 35px;
+  }
 
   &--center {
     text-align: center;
@@ -13,6 +31,22 @@
 
   &--gold {
     color: #d6ab49;
+  }
+
+  &--medium {
+    font-size: 60px;
+    @include adaptive(1439) {
+      font-size: 50px;
+    }
+    @include adaptive(1279) {
+      font-size: 45px;
+    }
+    @include adaptive(767) {
+      font-size: 40px;
+    }
+    @include adaptive(575) {
+      font-size: 35px;
+    }
   }
 }
 

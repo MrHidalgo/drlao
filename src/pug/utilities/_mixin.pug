@@ -4,4 +4,29 @@ include ./_mixin/_hamburger
 include ./_mixin/_swiper
 include ./_mixin/_modal
 
+mixin mainSection(classMod, gradientMod, img, title, breadcrumbsArr, anchorID)
+  section#main.main(class!="main--" + classMod)
+    .main__bg(class!= 'main__bg--' + gradientMod)
+      img(src!="img/" + img alt="")
+    .main__wrapper
+      if(classMod === 'home')
+        .main__content
+          p.main__subtitle
+            span!= breadcrumbsArr
+          h1.main__title.c-title.c-title--medium.c-title--center!= title
+      else
+        .main__content
+          .main__breadcrumbs
+            each val, idx in breadcrumbsArr
+              if(idx === breadcrumbsArr.length - 1)
+                p!= val
+              else
+                a(href="#")!= val
+          h1.main__title.c-title.c-title--medium.c-title--center!= title
+
+      .main__btn
+        a(href!= "#" + anchorID anchor-js)
+          span EXPLORE MORE
+          i.icon-font.icon-arrow-left
+
 //- MIXIN :: END

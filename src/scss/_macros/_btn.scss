@@ -18,10 +18,17 @@
   background-color: transparent;
   font-weight: 500;
   font-size: 16px;
-  line-height: 38px;
+  line-height: 1;
   color: #000;
+  @include transition(color);
+  @include adaptive(767) {
+    font-size: 14px;
+  }
 
   &:hover {
+    color: #ffffff;
+    @include transition(color);
+
     &:before {
       opacity: 0;
       width: 0;
@@ -47,6 +54,9 @@
     line-height: 38px;
     color: #000;
     @include transition(opacity, width, margin-right);
+    @include adaptive(767) {
+      font-size: 14px;
+    }
   }
 
   &:after {

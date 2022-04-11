@@ -54,6 +54,9 @@
       flex: 1;
       min-width: 1px;
       max-width: 100%;
+      @include adaptive(767) {
+        justify-content: flex-start;
+      }
     }
   }
 

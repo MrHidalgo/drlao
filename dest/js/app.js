@@ -114,7 +114,7 @@ var HeaderFixed = function () {
       }
 
       for (var i = 0; i < $element.length; i++) {
-        if ($window.scrollTop() > $window.height() / 2.5) {
+        if ($window.scrollTop() > $window.height() / 2) {
           elHeight = $($element[i]).outerHeight();
           dHeight = $document.height();
           wHeight = $window.height();
@@ -212,6 +212,35 @@ var Reviews = function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (Reviews);
 
+/***/ }),
+
+/***/ "./src/js/macros/smoothAnchorScroll.js":
+/*!*********************************************!*\
+  !*** ./src/js/macros/smoothAnchorScroll.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var anchorScroll = function () {
+  var init = function init() {
+    if (!$('[anchor-js]').length) return;
+    $('[anchor-js]').on("click", function (e) {
+      var linkHref = $(e.currentTarget).attr('href'),
+          headerHeight = $(".header").outerHeight() || 0,
+          topHeightOffset = $(linkHref).offset().top;
+      $('body, html').animate({
+        scrollTop: topHeightOffset
+      }, 1000);
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (anchorScroll);
+
 /***/ })
 
 /******/ 	});
@@ -265,6 +294,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_hamburger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/hamburger */ "./src/js/macros/hamburger.js");
 /* harmony import */ var _macros_header_fixed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/header-fixed */ "./src/js/macros/header-fixed.js");
 /* harmony import */ var _macros_reviews__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/reviews */ "./src/js/macros/reviews.js");
+/* harmony import */ var _macros_smoothAnchorScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./macros/smoothAnchorScroll */ "./src/js/macros/smoothAnchorScroll.js");
+
 
 
 
@@ -280,6 +311,7 @@ window.addEventListener('load', function (ev) {
   _macros_hamburger__WEBPACK_IMPORTED_MODULE_2__["default"].init();
   _macros_header_fixed__WEBPACK_IMPORTED_MODULE_3__["default"].init();
   _macros_reviews__WEBPACK_IMPORTED_MODULE_4__["default"].init();
+  _macros_smoothAnchorScroll__WEBPACK_IMPORTED_MODULE_5__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

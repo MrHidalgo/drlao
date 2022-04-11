@@ -5,6 +5,9 @@
   font-size: 15px;
   text-align: center;
   color: #000;
+  @include adaptive(767) {
+    font-size: 12px;
+  }
 }
 
 // LABEL :: END

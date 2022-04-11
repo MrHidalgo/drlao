@@ -31,7 +31,7 @@ const HeaderFixed = (function() {
 
       for(let i = 0; i < $element.length; i++) {
 
-        if($window.scrollTop() > ($window.height() / 2.5)) {
+        if($window.scrollTop() > ($window.height() / 2)) {
 
           elHeight = $($element[i]).outerHeight();
           dHeight = $document.height();

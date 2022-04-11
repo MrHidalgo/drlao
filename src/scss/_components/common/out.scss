@@ -4,6 +4,14 @@
   position: relative;
   padding-top: 90px;
   padding-bottom: 90px;
+  @include adaptive(1535) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @include adaptive(1279) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   &__bg {
     z-index: 0;
@@ -12,11 +20,26 @@
     left: 0;
     width: 100%;
     height: calc(100% - 90px);
-
+    @include adaptive(1535) {
+      top: 70px;
+      height: calc(100% - 140px);
+    }
+    @include adaptive(1279) {
+      top: 50px;
+      height: calc(100% - 100px);
+    }
     img {
       display: block;
       max-width: 100%;
       height: auto;
+      max-height: 100%;
+      @include adaptive(767) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 
@@ -24,12 +47,43 @@
     z-index: 2;
     position: relative;
     padding-top: 435px;
+    @include adaptive(1535) {
+      padding-top: 400px;
+    }
+    @include adaptive(1365) {
+      padding-top: 300px;
+    }
+    @include adaptive(1279) {
+      padding-top: 200px;
+    }
+    @include adaptive(1023) {
+      padding-top: 150px;
+    }
+    @include adaptive(767) {
+      position: relative;
+      left: -20px;
+      width: calc(100% + 40px);
+      padding-top: 0;
+    }
 
     > div {
       width: 58%;
       padding: 110px 150px;
       margin-left: auto;
       background-color: rgba(#000, 0.7);
+      @include adaptive(1365) {
+        padding: 100px;
+      }
+      @include adaptive(1279) {
+        padding: 50px 75px;
+      }
+      @include adaptive(1023) {
+        padding: 50px;
+      }
+      @include adaptive(767) {
+        width: 100%;
+        padding: 100px 20px;
+      }
     }
   }
 
@@ -39,6 +93,9 @@
 
   &__desc {
     padding-bottom: 100px;
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
   }
 }
 
