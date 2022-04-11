@@ -1,0 +1,23 @@
+---
+title: William Lao, MD | Procedures
+
+pageClassName: p-procedures
+---
+extends shared/_layout
+
+block header
+  include components/common/_header--white
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('procedures', 'black', 'img-procedures-bg.jpg', 'Procedures', ['HOME', '|', 'procedures'], 'procedures')
+
+    include components/procedures/procedures
+
+    include components/common/before-after
+    include components/common/out
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/patient-resources
+    include components/common/latest

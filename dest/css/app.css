@@ -3380,3 +3380,191 @@ picture {
   width: 100%;
   max-width: 675px;
 }
+
+.procedures {
+  position: relative;
+  padding-top: 240px;
+  padding-bottom: 160px;
+}
+@media screen and (max-width: 1535px) {
+  .procedures {
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .procedures {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .procedures {
+    padding-top: 100px;
+  }
+}
+.procedures__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 140px;
+}
+@media screen and (max-width: 767px) {
+  .procedures__bg {
+    padding-top: 100px;
+  }
+}
+.procedures__bg svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1535px) {
+  .procedures__bg svg {
+    opacity: 0.45;
+  }
+}
+.procedures__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .procedures__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.procedures__wrapper:not(:last-of-type) {
+  padding-bottom: 160px;
+}
+@media screen and (max-width: 1535px) {
+  .procedures__wrapper:not(:last-of-type) {
+    padding-bottom: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .procedures__wrapper:not(:last-of-type) {
+    padding-bottom: 80px;
+  }
+}
+.procedures__wrapper-1 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.procedures__wrapper > div {
+  width: 50%;
+}
+@media screen and (max-width: 1279px) {
+  .procedures__wrapper > div {
+    width: 100%;
+  }
+}
+.procedures__title {
+  padding-bottom: 20px;
+}
+.procedures__desc {
+  width: 100%;
+  max-width: 695px;
+  padding-right: 20px;
+}
+.procedures__desc-1 {
+  max-width: 815px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.procedures__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 155px;
+  padding: 20px;
+  background-color: #000000;
+  background-image: url("../img/img-procedures-box-bg@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  .procedures__box {
+    padding: 20px 10px;
+  }
+}
+.procedures__box:after {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  background-image: url("../img/logo-procedures-box.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 20px;
+}
+.procedures__box > p {
+  z-index: 2;
+  position: relative;
+  min-height: 45px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  line-height: 18px;
+  color: #d6ab49;
+}
+@media screen and (max-width: 1279px) {
+  .procedures__box > p {
+    font-size: 16px;
+  }
+}
+.procedures__box-wrapper {
+  position: relative;
+  left: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 20px);
+}
+@media screen and (max-width: 1279px) {
+  .procedures__box-wrapper {
+    padding-top: 50px;
+  }
+}
+.procedures__box-wrapper > div {
+  width: 100%;
+  max-width: 33.3333333333%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .procedures__box-wrapper > div {
+    max-width: 50%;
+  }
+}
