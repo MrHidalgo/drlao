@@ -19,6 +19,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  letter-spacing: 0.1em;
   color: #000;
   @include transition(color);
   @include adaptive(767) {

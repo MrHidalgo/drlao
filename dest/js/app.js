@@ -59,6 +59,7 @@ var Common = function () {
 __webpack_require__.r(__webpack_exports__);
 var GalerryCB = function () {
   var init = function init() {
+    if (!$('#gallery').length) return;
     $('#gallery .gallery__wrapper-2')[0].style.width = 'calc(100% - ' + (document.querySelector('#gallery .c-grid').getBoundingClientRect().left + 20) + 'px)';
 
     for (var i = 0; i < $('.gallery__wrapper-2 .swiper').length; i++) {

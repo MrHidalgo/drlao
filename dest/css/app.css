@@ -151,7 +151,7 @@
   src: url("../fonts/iconFont.eot");
   src: url("../fonts/iconFont.eot?#iefix") format("eot"), url("../fonts/iconFont.woff2") format("woff2"), url("../fonts/iconFont.woff") format("woff"), url("../fonts/iconFont.ttf") format("truetype"), url("../fonts/iconFont.svg#iconFont") format("svg");
 }
-.icon-youtube:before, .icon-star:before, .icon-message:before, .icon-linkedin:before, .icon-line:before, .icon-is:before, .icon-instagram:before, .icon-follow-4:before, .icon-follow-3:before, .icon-follow-2:before, .icon-follow-1:before, .icon-facebook:before, .icon-arrow-left:before {
+.icon-youtube:before, .icon-star:before, .icon-message:before, .icon-linkedin:before, .icon-line:before, .icon-is:before, .icon-instagram:before, .icon-google:before, .icon-follow-4:before, .icon-follow-3:before, .icon-follow-2:before, .icon-follow-1:before, .icon-facebook:before, .icon-arrow-left:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -186,32 +186,36 @@
   content: "\e006";
 }
 
-.icon-instagram:before {
+.icon-google:before {
   content: "\e007";
 }
 
-.icon-is:before {
+.icon-instagram:before {
   content: "\e008";
 }
 
-.icon-line:before {
+.icon-is:before {
   content: "\e009";
 }
 
-.icon-linkedin:before {
+.icon-line:before {
   content: "\e00a";
 }
 
-.icon-message:before {
+.icon-linkedin:before {
   content: "\e00b";
 }
 
-.icon-star:before {
+.icon-message:before {
   content: "\e00c";
 }
 
-.icon-youtube:before {
+.icon-star:before {
   content: "\e00d";
+}
+
+.icon-youtube:before {
+  content: "\e00e";
 }
 
 html,
@@ -595,6 +599,7 @@ picture {
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  letter-spacing: 0.1em;
   color: #000;
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
@@ -2052,6 +2057,9 @@ picture {
   background-position: center;
   background-size: cover;
 }
+.schedule.schedule--indent {
+  margin-bottom: 100px;
+}
 .schedule:after {
   content: "";
   z-index: 1;
@@ -2437,5 +2445,258 @@ picture {
   .gallery__carousel .swiper-slide .c-btn__wrapper {
     left: 20px;
     bottom: 20px;
+  }
+}
+
+.patient-resources {
+  padding-top: 140px;
+  padding-bottom: 180px;
+}
+@media screen and (max-width: 1535px) {
+  .patient-resources {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .patient-resources {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.patient-resources__wrapper-1 {
+  padding-bottom: 180px;
+}
+@media screen and (max-width: 1535px) {
+  .patient-resources__wrapper-1 {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .patient-resources__wrapper-1 {
+    padding-bottom: 100px;
+  }
+}
+.patient-resources__wrapper-2 {
+  padding-bottom: 180px;
+}
+@media screen and (max-width: 1535px) {
+  .patient-resources__wrapper-2 {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .patient-resources__wrapper-2 {
+    padding-bottom: 100px;
+  }
+}
+.patient-resources__title {
+  padding-bottom: 20px;
+}
+.patient-resources__desc {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__desc {
+    padding-bottom: 50px;
+  }
+}
+.patient-resources__desc-1 {
+  max-width: 675px;
+}
+.patient-resources__desc-2 {
+  max-width: 852px;
+}
+.patient-resources__desc-3 {
+  max-width: 675px;
+}
+.patient-resources__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 225px;
+  padding: 40px;
+  border: 5px solid #000;
+  background-color: #000000;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__content {
+    padding: 40px 20px;
+  }
+}
+.patient-resources__content-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.patient-resources__content-wrapper > div {
+  width: 100%;
+  max-width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__content-wrapper > div {
+    max-width: 100%;
+  }
+  .patient-resources__content-wrapper > div:not(:last-of-type) {
+    padding-bottom: 15px;
+  }
+}
+.patient-resources__content p {
+  font-weight: 500;
+  font-size: 30px;
+  color: #d6ab49;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__content p {
+    font-size: 25px;
+  }
+}
+.patient-resources__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 812px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 40px 30px;
+  background-color: #000;
+}
+.patient-resources__block > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+.patient-resources__block .c-desc {
+  padding-bottom: 40px;
+  color: #ffffff;
+  text-align: center;
+}
+.patient-resources__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 225px;
+  border: 5px solid #000;
+  background-color: #000;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__box {
+    min-height: 200px;
+  }
+}
+.patient-resources__box:hover {
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.patient-resources__box:hover .icon-font,
+.patient-resources__box:hover p {
+  color: #d6ab49;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.patient-resources__box-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1305px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.patient-resources__box-wrapper > div {
+  width: 100%;
+  max-width: calc((100% - 45px) / 4);
+}
+@media screen and (max-width: 1023px) {
+  .patient-resources__box-wrapper > div {
+    max-width: calc((100% - 15px) / 2);
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__box-wrapper > div {
+    max-width: 100%;
+  }
+}
+.patient-resources__box .icon-font {
+  margin-bottom: 35px;
+  font-size: 40px;
+  color: #d6ab49;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__box .icon-font {
+    font-size: 35px;
+  }
+}
+.patient-resources__box p {
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__box p {
+    font-size: 25px;
   }
 }

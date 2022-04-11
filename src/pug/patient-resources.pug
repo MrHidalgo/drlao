@@ -1,0 +1,15 @@
+---
+title: William Lao, MD | Patient Resources
+
+pageClassName: p-patient-resources
+---
+extends shared/_layout
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('patient-resources', 'white', 'img-patient-resources-bg.jpg', 'Patient Resources', ['HOME', '|', 'RESOURCES'], 'patient-resources')
+
+    include components/patient-resources/patient-resources
+
+    include components/common/schedule

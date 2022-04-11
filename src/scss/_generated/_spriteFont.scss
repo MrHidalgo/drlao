@@ -45,26 +45,29 @@
 	@if $filename == follow-4 {
 		$char: "\E006";
 	}
-	@if $filename == instagram {
+	@if $filename == google {
 		$char: "\E007";
 	}
-	@if $filename == is {
+	@if $filename == instagram {
 		$char: "\E008";
 	}
-	@if $filename == line {
+	@if $filename == is {
 		$char: "\E009";
 	}
-	@if $filename == linkedin {
+	@if $filename == line {
 		$char: "\E00A";
 	}
-	@if $filename == message {
+	@if $filename == linkedin {
 		$char: "\E00B";
 	}
-	@if $filename == star {
+	@if $filename == message {
 		$char: "\E00C";
 	}
-	@if $filename == youtube {
+	@if $filename == star {
 		$char: "\E00D";
+	}
+	@if $filename == youtube {
+		$char: "\E00E";
 	}
 
 	@return $char;
@@ -103,6 +106,10 @@
 }
 .icon-follow-4 {
 	@include icon(follow-4);
+
+}
+.icon-google {
+	@include icon(google);
 
 }
 .icon-instagram {

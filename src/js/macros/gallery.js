@@ -1,6 +1,8 @@
 const GalerryCB = (function() {
   const init = function() {
 
+    if(!$('#gallery').length) return;
+
     $('#gallery .gallery__wrapper-2')[0].style.width = 'calc(100% - ' + (document.querySelector('#gallery .c-grid').getBoundingClientRect().left + 20) + 'px)';
 
     for(let i = 0; i < $('.gallery__wrapper-2 .swiper').length; i++) {
