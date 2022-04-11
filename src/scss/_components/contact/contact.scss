@@ -1,0 +1,190 @@
+// SECTION :: START
+
+.contact {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  @include adaptive(1279) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__wrapper {
+    &-1 {
+      padding-bottom: 140px;
+      @include adaptive(1279) {
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 812px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1364px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include adaptive(767) {
+        flex-wrap: wrap;
+      }
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 16px) / 2);
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-field {
+      position: relative;
+      padding-bottom: 25px;
+
+      &--btn {
+        padding-top: 35px;
+        @include adaptive(767) {
+          padding-top: 5px;
+        }
+      }
+
+      label {
+        display: flex;
+        width: 100%;
+      }
+
+      input,
+      select,
+      textarea {
+        outline: none;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 75px;
+        padding: 0 30px;
+        border: 1px solid #CAAA51;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #fff;
+        font-weight: bold;
+        font-size: 21px;
+        color: #000;
+        @include inputPlaceholder {
+          font-weight: bold;
+          font-size: 21px;
+          color: #adadad;
+        }
+        @include adaptive(767) {
+          height: 65px;
+          padding: 0 20px;
+          font-size: 18px;
+          @include inputPlaceholder {
+            font-size: 18px;
+          }
+        }
+      }
+
+      textarea {
+        height: 250px;
+        padding: 30px;
+        @include adaptive(767) {
+          height: 200px;
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  &__address {
+    position: relative;
+    display: flex;
+    @include adaptive(767) {
+      flex-wrap: wrap;
+    }
+
+    &-col {
+      width: 50%;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-block {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 80px;
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px 40px;
+      background-color: rgba(#000, 0.7);
+      @include adaptive(767) {
+        position: static;
+        background-color: #000000;
+      }
+
+      .c-title {
+        width: 100%;
+        padding-bottom: 20px;
+      }
+
+      > div {
+        width: 50%;
+        @include adaptive(767) {
+          width: 100%;
+        }
+
+        &:nth-of-type(2) {
+          display: flex;
+          justify-content: flex-end;
+          @include adaptive(767) {
+            justify-content: flex-start;
+            margin-top: 25px;
+          }
+        }
+
+        > a {
+          display: flex;
+          margin-bottom: 25px;
+          font-weight: 500;
+          font-size: 16px;
+          color: #fff;
+        }
+
+        > p {
+          font-weight: 500;
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

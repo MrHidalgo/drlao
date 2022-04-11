@@ -1,0 +1,13 @@
+---
+title: William Lao, MD | Contact
+
+pageClassName: p-contact
+---
+extends shared/_layout
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('contact', 'white', 'img-contact-bg.jpg', 'CONTACT US', ['home', '|', 'contact'], 'contact')
+
+    include components/contact/contact
