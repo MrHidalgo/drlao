@@ -1,0 +1,20 @@
+---
+title: William Lao, MD | Meet
+
+pageClassName: p-meet
+---
+extends shared/_layout
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('meet', 'white', 'img-meet-bg.jpg', 'DR. WILLIAM LAO', ['home', '|', 'about', '|', 'DR. WILLIAM LAO'], '')
+
+    include components/meet/meet
+    include components/meet/achievement
+
+    include components/common/out
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/patient-resources
+    include components/common/latest

@@ -7,6 +7,7 @@ import Reviews from "./macros/reviews";
 import AnchorScroll from "./macros/smoothAnchorScroll";
 import GalerryCB from "./macros/gallery";
 import Medical from "./macros/medical";
+import AchievementToggle from "./macros/achievementToggle";
 
 
 // EVENT LISTENER - LOAD
@@ -25,6 +26,7 @@ window.addEventListener('load', (ev) => {
 
   Medical.init();
   GalerryCB.init();
+  AchievementToggle.init();
 
 }, false);
 

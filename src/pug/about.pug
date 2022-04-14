@@ -1,0 +1,21 @@
+---
+title: William Lao, MD | About
+
+pageClassName: p-about
+---
+extends shared/_layout
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('about', 'white', 'img-about-bg.jpg', 'OUR PRACTICE', ['home', '|', 'about'], 'office')
+
+    include components/about/office
+    include components/about/about
+    include components/about/doctors
+
+    include components/common/out
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/patient-resources
+    include components/common/latest

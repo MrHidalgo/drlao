@@ -50,6 +50,34 @@ var Common = function () {
 
 /***/ }),
 
+/***/ "./src/js/macros/achievementToggle.js":
+/*!********************************************!*\
+  !*** ./src/js/macros/achievementToggle.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var AchievementToggle = function () {
+  var init = function init() {
+    $('.achievement__nav a').on('click', function (ev) {
+      var el = $(ev.currentTarget),
+          elID = el.attr('data-id');
+      $('.achievement__nav a').removeClass('is-active');
+      el.addClass('is-active');
+      $('.achievement__block').removeClass('is-active');
+      $('.achievement__block[data-block-id="' + el.attr('data-id') + '"]').addClass('is-active');
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (AchievementToggle);
+
+/***/ }),
+
 /***/ "./src/js/macros/gallery.js":
 /*!**********************************!*\
   !*** ./src/js/macros/gallery.js ***!
@@ -382,6 +410,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_smoothAnchorScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./macros/smoothAnchorScroll */ "./src/js/macros/smoothAnchorScroll.js");
 /* harmony import */ var _macros_gallery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./macros/gallery */ "./src/js/macros/gallery.js");
 /* harmony import */ var _macros_medical__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./macros/medical */ "./src/js/macros/medical.js");
+/* harmony import */ var _macros_achievementToggle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./macros/achievementToggle */ "./src/js/macros/achievementToggle.js");
+
 
 
 
@@ -403,6 +433,7 @@ window.addEventListener('load', function (ev) {
   _macros_smoothAnchorScroll__WEBPACK_IMPORTED_MODULE_5__["default"].init();
   _macros_medical__WEBPACK_IMPORTED_MODULE_7__["default"].init();
   _macros_gallery__WEBPACK_IMPORTED_MODULE_6__["default"].init();
+  _macros_achievementToggle__WEBPACK_IMPORTED_MODULE_8__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 
