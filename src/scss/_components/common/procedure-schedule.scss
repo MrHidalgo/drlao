@@ -1,0 +1,50 @@
+// SECTION :: START
+
+.procedure-schedule {
+  padding-top: 90px;
+  padding-bottom: 180px;
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 30px 50px;
+    background-color: #000000;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 170px) / 3);
+      }
+    }
+
+    &-title {
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #d6ab49;
+      text-align: center;
+    }
+
+    &-desc {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 38px;
+      color: #ffffff;
+      text-align: center;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// SECTION :: END

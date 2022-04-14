@@ -1,7 +1,7 @@
 ---
-title: William Lao, MD | Facelift
+title: William Lao, MD | Liposuction
 
-pageClassName: p-facelift
+pageClassName: p-liposuction
 ---
 extends shared/_layout
 
@@ -11,12 +11,15 @@ block header
 block content
   main(class!= pageClassName)
 
-    +mainSection('facelift', 'black', 'img-facelift-bg.jpg', 'Facelift', ['HOME', '|', 'PROCEDURES', '|', 'FACE', '|', 'FACELIFT'], 'facelift')
+    +mainSection('liposuction', 'black', 'img-liposuction-bg.jpg', 'Facelift', ['HOME', '|', 'PROCEDURES', '|', 'body', '|', 'liposuction'], 'liposuction')
 
-    include components/facelift/facelift
+    include components/liposuction/liposuction
 
     include components/common/about
     include components/common/procedure-schedule
+
+    include components/liposuction/recovery
+
     include components/common/faq
     include components/common/description
     include components/common/before-after
