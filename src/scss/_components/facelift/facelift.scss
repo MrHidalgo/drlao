@@ -1,0 +1,151 @@
+// SECTION :: START
+
+.facelift {
+  padding-top: 180px;
+  padding-bottom: 180px;
+
+  &__container {
+    position: relative;
+
+    &-2 {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: calc(100% - 120px);
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      margin-left: auto;
+    }
+  }
+
+  &__wrapper {
+    &-1 {
+      display: flex;
+      align-items: center;
+
+      > div {
+        width: 50%;
+        padding-top: 120px;
+        padding-right: 50px;
+        padding-bottom: 220px;
+      }
+
+      .facelift__desc {
+        width: 100%;
+        max-width: 810px;
+
+        &:not(:last-of-type) {
+          padding-bottom: 50px;
+        }
+      }
+    }
+
+    &-2 {
+      .facelift__desc {
+        width: 100%;
+        max-width: 815px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50px;
+        text-align: center;
+      }
+    }
+
+    &-4 {
+      padding-top: 50px;
+
+      .facelift__title {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 35px 50px;
+    background-color: #000000;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 15px) / 2);
+      }
+    }
+
+    &-title {
+      padding-bottom: 20px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      padding-left: 40px;
+
+      li {
+        list-style-type: disc;
+        font-size: 20px;
+        color: #d6ab49;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 30px 50px;
+    background-color: #000000;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 170px) / 3);
+      }
+    }
+
+    &-title {
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #d6ab49;
+      text-align: center;
+    }
+
+    &-desc {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 38px;
+      color: #ffffff;
+      text-align: center;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// SECTION :: END

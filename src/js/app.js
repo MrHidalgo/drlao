@@ -8,6 +8,8 @@ import AnchorScroll from "./macros/smoothAnchorScroll";
 import GalerryCB from "./macros/gallery";
 import Medical from "./macros/medical";
 import AchievementToggle from "./macros/achievementToggle";
+import FaqToggle
+  from "./macros/faq";
 
 
 // EVENT LISTENER - LOAD
@@ -27,6 +29,7 @@ window.addEventListener('load', (ev) => {
   Medical.init();
   GalerryCB.init();
   AchievementToggle.init();
+  FaqToggle.init();
 
 }, false);
 

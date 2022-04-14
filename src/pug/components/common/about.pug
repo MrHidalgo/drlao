@@ -1,0 +1,21 @@
+// SECTION :: START
+
+section#about.about
+
+  .about__wrapper
+    .about__wrapper-left
+
+      if(pageClassName == 'p-about')
+        img(src="img/img-about-1.jpg" srcset="img/img-about-1@2x.jpg 2x" alt="")
+      else if(pageClassName == 'p-facelift')
+        img(src="img/img-facelift-2.jpg" srcset="img/img-facelift-2@2x.jpg 2x" alt="")
+
+    .about__wrapper-right
+
+      if(pageClassName == 'p-about')
+        img(src="img/img-about-2.jpg" srcset="img/img-about-2@2x.jpg 2x" alt="")
+      else if(pageClassName == 'p-facelift')
+        img(src="img/img-facelift-3.jpg" srcset="img/img-facelift-3@2x.jpg 2x" alt="")
+
+
+// SECTION :: END

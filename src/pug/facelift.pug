@@ -1,0 +1,27 @@
+---
+title: William Lao, MD | Facelift
+
+pageClassName: p-facelift
+---
+extends shared/_layout
+
+block header
+  include components/common/_header--white
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('facelift', 'black', 'img-facelift-bg.jpg', 'Facelift', ['HOME', '|', 'PROCEDURES', '|', 'FACE', '|', 'FACELIFT'], 'facelift')
+
+    include components/facelift/facelift
+
+    include components/common/faq
+
+    include components/facelift/description
+
+    include components/common/before-after
+    include components/common/out
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/patient-resources
+    include components/common/latest

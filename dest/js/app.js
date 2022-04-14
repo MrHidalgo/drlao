@@ -78,6 +78,31 @@ var AchievementToggle = function () {
 
 /***/ }),
 
+/***/ "./src/js/macros/faq.js":
+/*!******************************!*\
+  !*** ./src/js/macros/faq.js ***!
+  \******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var FaqToggle = function () {
+  var init = function init() {
+    $('.faq__collapse-head').on('click', function (ev) {
+      var el = $(ev.currentTarget);
+      el.toggleClass('is-open');
+      el.siblings('.faq__collapse-body').slideToggle(200);
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (FaqToggle);
+
+/***/ }),
+
 /***/ "./src/js/macros/gallery.js":
 /*!**********************************!*\
   !*** ./src/js/macros/gallery.js ***!
@@ -411,6 +436,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_gallery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./macros/gallery */ "./src/js/macros/gallery.js");
 /* harmony import */ var _macros_medical__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./macros/medical */ "./src/js/macros/medical.js");
 /* harmony import */ var _macros_achievementToggle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./macros/achievementToggle */ "./src/js/macros/achievementToggle.js");
+/* harmony import */ var _macros_faq__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./macros/faq */ "./src/js/macros/faq.js");
+
 
 
 
@@ -434,6 +461,7 @@ window.addEventListener('load', function (ev) {
   _macros_medical__WEBPACK_IMPORTED_MODULE_7__["default"].init();
   _macros_gallery__WEBPACK_IMPORTED_MODULE_6__["default"].init();
   _macros_achievementToggle__WEBPACK_IMPORTED_MODULE_8__["default"].init();
+  _macros_faq__WEBPACK_IMPORTED_MODULE_9__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

@@ -39,6 +39,8 @@
 @import "_components/common/schedule";
 @import "_components/common/patient-resources";
 @import "_components/common/latest";
+@import "_components/common/about";
+@import "_components/common/faq";
 
 @import "_components/gallery/gallery";
 
@@ -52,8 +54,10 @@
 
 @import "_components/procedures/procedures";
 
-@import "_components/about/about";
 @import "_components/about/doctors";
 
 @import "_components/meet/meet";
 @import "_components/meet/achievement";
+
+@import "_components/facelift/facelift";
+@import "_components/facelift/description";
