@@ -1,0 +1,95 @@
+// SECTION :: START
+
+.state {
+  position: relative;
+  padding-top: 350px;
+  padding-bottom: 180px;
+  @include adaptive(1535) {
+    padding-top: 250px;
+    padding-bottom: 180px;
+  }
+  @include adaptive(1365) {
+    padding-top: 180px;
+    padding-bottom: 140px;
+  }
+  @include adaptive(1023) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include adaptive(767) {
+    padding-bottom: 50px;
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 50%;
+    height: calc(100% - (140px + 160px));
+    @include adaptive(1365) {
+      top: 90px;
+    }
+    @include adaptive(1023) {
+      display: none;
+    }
+
+    img {
+      @extend %imageResCoverAbs;
+    }
+  }
+
+  &__text {
+    z-index: 1;
+    position: absolute;
+    top: 290px;
+    right: 0;
+    width: 100%;
+    @include adaptive(1023) {
+      top: 50px;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      @include adaptive(1535) {
+        opacity: 0.45;
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    display: flex;
+
+    > div {
+      width: 100%;
+      max-width: 674px;
+      margin-left: auto;
+      padding-left: 20px;
+      @include adaptive(1365) {
+        max-width: 50%;
+      }
+      @include adaptive(1023) {
+        max-width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__desc {
+    padding-bottom: 100px;
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+// SECTION :: END

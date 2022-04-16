@@ -15,6 +15,24 @@
     padding-bottom: 50px;
   }
 
+  &.medical--homepage {
+    padding-top: 200px;
+    padding-bottom: 300px;
+    @include adaptive(1279) {
+      padding-top: 140px;
+    }
+    @include adaptive(767) {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    .medical {
+      &__bg {
+        padding-top: 100px;
+      }
+    }
+  }
+
   &__bg {
     z-index: 2;
     position: absolute;
@@ -174,6 +192,10 @@
   &__desc {
     width: 100%;
     max-width: 675px;
+  }
+
+  &__btn {
+    padding-top: 50px;
   }
 }
 

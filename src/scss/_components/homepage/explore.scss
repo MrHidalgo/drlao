@@ -1,0 +1,262 @@
+// SECTION :: START
+
+.explore {
+  &__container {
+    position: relative;
+    margin-top: 150px;
+    @include adaptive(1439) {
+      margin-top: 100px;
+    }
+    @include adaptive(767) {
+      margin-top: 50px;
+    }
+
+    &-3 {
+      padding-top: 150px;
+      @include adaptive(1439) {
+        padding-top: 100px;
+      }
+      @include adaptive(767) {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+
+    &-1 {
+      left: 0;
+      width: 50%;
+      height: 100%;
+      @include adaptive(767) {
+        position: static !important;
+        width: 100%;
+        height: auto;
+
+        img {
+          position: relative;
+        }
+      }
+    }
+    &-2 {
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      @include adaptive(767) {
+        position: static !important;
+        width: 100%;
+        height: auto;
+
+        img {
+          position: relative;
+        }
+      }
+    }
+    &-3 {
+      top: 150px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 450px);
+    }
+
+    img {
+      @extend %imageResCoverAbs;
+    }
+  }
+
+  &__text {
+    z-index: 1;
+    position: absolute;
+
+    &-1 {
+      top: 135px;
+      right: 0;
+      @include adaptive(767) {
+        top: 0;
+      }
+    }
+    &-2 {
+      top: 135px;
+      left: 0;
+      @include adaptive(767) {
+        top: 0;
+      }
+    }
+    &-3 {
+      top: 0;
+      left: 0;
+      right: 0;
+
+      svg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      @include adaptive(1535) {
+        opacity: 0.45;
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+
+    &-1 {
+      width: 50%;
+      padding-left: 50px;
+      margin-left: auto;
+      padding-top: 200px;
+      @include adaptive(1439) {
+        padding-top: 100px;
+      }
+      @include adaptive(1023) {
+        padding-top: 50px;
+        padding-left: 20px;
+      }
+      @include adaptive(767) {
+        width: 100%;
+        padding-top: 0;
+        padding-left: 0;
+        padding-bottom: 50px;
+      }
+
+      > div {
+        width: 100%;
+        max-width: 674px;
+        margin-left: auto;
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+    &-2 {
+      width: 50%;
+      padding-right: 50px;
+      padding-top: 200px;
+      @include adaptive(1439) {
+        padding-top: 100px;
+      }
+      @include adaptive(1023) {
+        padding-top: 50px;
+        padding-right: 20px;
+      }
+      @include adaptive(767) {
+        width: 100%;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 50px;
+      }
+
+      > div {
+        width: 100%;
+        max-width: 674px;
+      }
+    }
+    &-3 {
+      padding-top: 480px;
+      @include adaptive(1535) {
+        padding-top: 400px;
+      }
+      @include adaptive(1023) {
+        padding-top: 300px;
+      }
+      @include adaptive(767) {
+        padding-top: 200px;
+      }
+
+      > div {
+        width: 100%;
+        max-width: 810px;
+        padding: 35px 60px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(#000, 0.7);
+        text-align: center;
+        @include adaptive(767) {
+          padding: 50px 20px;
+        }
+      }
+
+      .explore__btn {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__desc {
+    padding-bottom: 100px;
+    @include adaptive(1023) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__btn {
+    padding-bottom: 100px;
+    @include adaptive(1023) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-1,
+    &-2 {
+      @include adaptive(1279) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &-3 {
+      width: 100%;
+      max-width: 810px;
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
+      @include adaptive(767) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    a {
+      display: flex;
+      font-weight: 500;
+      font-size: 25px;
+      letter-spacing: 0.02em;
+      color: #000;
+      text-transform: uppercase;
+      @include hoverLink(#000);
+      @include adaptive(1439) {
+        font-size: 22px;
+      }
+      @include adaptive(1279) {
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+      }
+      @include adaptive(1023) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// SECTION :: END
