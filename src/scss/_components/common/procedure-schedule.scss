@@ -3,6 +3,16 @@
 .procedure-schedule {
   padding-top: 90px;
   padding-bottom: 180px;
+  @include adaptive(1535) {
+    padding-bottom: 140px;
+  }
+  @include adaptive(1279) {
+    padding-bottom: 100px;
+  }
+  @include adaptive(767) {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
 
   &__title {
     padding-bottom: 20px;
@@ -14,14 +24,28 @@
     min-height: 100%;
     padding: 30px 50px;
     background-color: #000000;
+    @include adaptive(1279) {
+      padding: 25px 40px;
+    }
 
     &-wrapper {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       > div {
         width: 100%;
         max-width: calc((100% - 170px) / 3);
+        @include adaptive(1279) {
+          max-width: calc((100% - 100px) / 3);
+        }
+        @include adaptive(1023) {
+          max-width: 100%;
+
+          &:not(:last-of-type) {
+            padding-bottom: 25px;
+          }
+        }
       }
     }
 

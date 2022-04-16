@@ -4,6 +4,10 @@
   position: relative;
   padding-top: 90px;
   padding-bottom: 90px;
+  @include adaptive(767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   &__bg {
     z-index: 0;
@@ -19,6 +23,9 @@
       height: auto;
       margin-left: auto;
       margin-right: auto;
+      @include adaptive(1535) {
+        opacity: 0.45;
+      }
     }
   }
 
@@ -28,6 +35,12 @@
 
     &-1 {
       padding-bottom: 140px;
+      @include adaptive(1279) {
+        padding-bottom: 100px;
+      }
+      @include adaptive(767) {
+        padding-bottom: 50px;
+      }
 
       .recovery {
         &__desc {
@@ -35,6 +48,9 @@
 
           &:not(:last-of-type) {
             padding-bottom: 40px;
+            @include adaptive(767) {
+              padding-bottom: 25px;
+            }
           }
 
           &-wrapper {
@@ -49,14 +65,28 @@
 
     &-2 {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       padding-bottom: 90px;
+      @include adaptive(767) {
+        padding-bottom: 50px;
+      }
 
       .recovery__wrapper {
         &-left,
         &-right {
           width: 100%;
           max-width: calc((100% - 150px) / 2);
+          @include adaptive(1279) {
+            max-width: calc((100% - 100px) / 2);
+          }
+          @include adaptive(767) {
+            max-width: 100%;
+
+            &:not(:last-of-type) {
+              padding-bottom: 50px;
+            }
+          }
         }
       }
     }
@@ -79,6 +109,12 @@
       > div {
         width: 100%;
         max-width: calc((100% - 150px) / 2);
+        @include adaptive(1279) {
+          max-width: calc((100% - 100px) / 2);
+        }
+        @include adaptive(767) {
+          max-width: calc((100% - 20px) / 2);
+        }
       }
     }
   }

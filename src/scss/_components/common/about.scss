@@ -2,6 +2,9 @@
 
 .about {
   padding-bottom: 320px;
+  @include adaptive(767) {
+    padding-bottom: 50px;
+  }
 
   &__wrapper {
     position: relative;
@@ -17,6 +20,9 @@
       right: 0;
       width: 45%;
       padding-top: 230px;
+      @include adaptive(767) {
+        padding-top: 50px;
+      }
 
       img {
         box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.16);

@@ -1432,7 +1432,7 @@ picture {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 30px;
+  min-height: 30px;
   padding-left: 15px;
   padding-right: 15px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -1441,6 +1441,9 @@ picture {
   .main__breadcrumbs {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    min-height: unset;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 .main__breadcrumbs-wrapper {
@@ -2313,6 +2316,11 @@ picture {
 .about {
   padding-bottom: 320px;
 }
+@media screen and (max-width: 767px) {
+  .about {
+    padding-bottom: 50px;
+  }
+}
 .about__wrapper {
   position: relative;
   display: -webkit-box;
@@ -2328,6 +2336,11 @@ picture {
   right: 0;
   width: 45%;
   padding-top: 230px;
+}
+@media screen and (max-width: 767px) {
+  .about__wrapper-right {
+    padding-top: 50px;
+  }
 }
 .about__wrapper-right img {
   -webkit-box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.16);
@@ -2354,6 +2367,16 @@ picture {
   background-position: center;
   background-size: cover;
 }
+@media screen and (max-width: 1279px) {
+  .faq {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq {
+    padding-top: 100px;
+  }
+}
 .faq:after {
   content: "";
   position: absolute;
@@ -2371,6 +2394,11 @@ picture {
 }
 .faq__title {
   padding-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .faq__title {
+    padding-bottom: 50px;
+  }
 }
 .faq__collapse {
   display: -webkit-box;
@@ -2390,8 +2418,18 @@ picture {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 125px;
+  min-height: 125px;
   padding: 20px 50px;
+}
+@media screen and (max-width: 1023px) {
+  .faq__collapse-head {
+    min-height: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq__collapse-head {
+    padding: 10px 20px;
+  }
 }
 .faq__collapse-head.is-open span:after {
   -webkit-transform: rotate(90deg);
@@ -2418,6 +2456,19 @@ picture {
   border-radius: 50%;
   background-color: #000000;
 }
+@media screen and (max-width: 1439px) {
+  .faq__collapse-head span {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq__collapse-head span {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+}
 .faq__collapse-head span:after, .faq__collapse-head span:before {
   content: "";
   position: absolute;
@@ -2427,6 +2478,17 @@ picture {
   content: "";
   width: 30px;
   height: 3px;
+}
+@media screen and (max-width: 1439px) {
+  .faq__collapse-head span:before {
+    width: 25px;
+    height: 2px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq__collapse-head span:before {
+    width: 20px;
+  }
 }
 .faq__collapse-head span:after {
   content: "";
@@ -2438,8 +2500,24 @@ picture {
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
+@media screen and (max-width: 1439px) {
+  .faq__collapse-head span:after {
+    width: 2px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq__collapse-head span:after {
+    height: 20px;
+  }
+}
 .faq__collapse-head span + p {
   padding-left: 40px;
+}
+@media screen and (max-width: 767px) {
+  .faq__collapse-head span + p {
+    padding-left: 20px;
+  }
 }
 .faq__collapse-head p {
   font-weight: 500;
@@ -2447,11 +2525,35 @@ picture {
   line-height: 60px;
   color: #d6ab49;
 }
+@media screen and (max-width: 1439px) {
+  .faq__collapse-head p {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .faq__collapse-head p {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq__collapse-head p {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
 .faq__collapse-body {
   display: none;
 }
 .faq__collapse-body > div {
   padding: 10px 50px 50px;
+}
+@media screen and (max-width: 767px) {
+  .faq__collapse-body > div {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
 }
 .faq__collapse-wrapper {
   display: -webkit-box;
@@ -2474,6 +2576,22 @@ picture {
   padding-top: 90px;
   padding-bottom: 180px;
 }
+@media screen and (max-width: 1535px) {
+  .procedure-schedule {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .procedure-schedule {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .procedure-schedule {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+}
 .procedure-schedule__title {
   padding-bottom: 20px;
 }
@@ -2489,10 +2607,17 @@ picture {
   padding: 30px 50px;
   background-color: #000000;
 }
+@media screen and (max-width: 1279px) {
+  .procedure-schedule__block {
+    padding: 25px 40px;
+  }
+}
 .procedure-schedule__block-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2500,6 +2625,19 @@ picture {
 .procedure-schedule__block-wrapper > div {
   width: 100%;
   max-width: calc((100% - 170px) / 3);
+}
+@media screen and (max-width: 1279px) {
+  .procedure-schedule__block-wrapper > div {
+    max-width: calc((100% - 100px) / 3);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .procedure-schedule__block-wrapper > div {
+    max-width: 100%;
+  }
+  .procedure-schedule__block-wrapper > div:not(:last-of-type) {
+    padding-bottom: 25px;
+  }
 }
 .procedure-schedule__block-title {
   font-size: 30px;
@@ -2522,6 +2660,23 @@ picture {
 .description {
   padding-top: 180px;
   padding-bottom: 90px;
+}
+@media screen and (max-width: 1535px) {
+  .description {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .description {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .description {
+    padding-bottom: 50px;
+  }
 }
 .description__title {
   padding-bottom: 20px;
@@ -4273,6 +4428,28 @@ picture {
   padding-top: 240px;
   padding-bottom: 140px;
 }
+@media screen and (max-width: 1535px) {
+  .liposuction {
+    padding-top: 180px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .liposuction {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .liposuction {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 .liposuction__bg {
   position: absolute;
   top: 0;
@@ -4282,6 +4459,26 @@ picture {
   width: 100%;
   height: 100%;
   padding-top: 180px;
+}
+@media screen and (max-width: 1535px) {
+  .liposuction__bg-1 {
+    padding-top: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .liposuction__bg-1 {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .liposuction__bg-1 {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction__bg-1 {
+    padding-top: 25px;
+  }
 }
 .liposuction__bg-2 img, .liposuction__bg-3 img {
   display: block;
@@ -4293,6 +4490,13 @@ picture {
   width: 50%;
   height: 100%;
 }
+@media screen and (max-width: 1023px) {
+  .liposuction__bg-2 {
+    position: static;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
 .liposuction__bg-2 img {
   margin-left: auto;
 }
@@ -4301,12 +4505,24 @@ picture {
   width: 50%;
   height: 100%;
 }
+@media screen and (max-width: 1023px) {
+  .liposuction__bg-3 {
+    position: static;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
 .liposuction__bg svg {
   display: block;
   max-width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width: 1535px) {
+  .liposuction__bg svg {
+    opacity: 0.45;
+  }
 }
 .liposuction__container {
   position: relative;
@@ -4318,6 +4534,21 @@ picture {
 .liposuction__wrapper-1 {
   padding-bottom: 170px;
 }
+@media screen and (max-width: 1535px) {
+  .liposuction__wrapper-1 {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .liposuction__wrapper-1 {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-1 {
+    padding-bottom: 50px;
+  }
+}
 .liposuction__wrapper-1 .liposuction__desc {
   width: 100%;
   max-width: 812px;
@@ -4328,15 +4559,46 @@ picture {
 .liposuction__wrapper-1 .liposuction__desc:not(:last-of-type) {
   padding-bottom: 50px;
 }
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-1 .liposuction__desc:not(:last-of-type) {
+    padding-bottom: 25px;
+  }
+}
 .liposuction__wrapper-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 200px;
 }
+@media screen and (max-width: 1535px) {
+  .liposuction__wrapper-2 {
+    padding-bottom: 180px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .liposuction__wrapper-2 {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .liposuction__wrapper-2 {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-2 {
+    padding-bottom: 50px;
+  }
+}
 .liposuction__wrapper-2 > div {
   width: 50%;
   padding-right: 50px;
+}
+@media screen and (max-width: 1279px) {
+  .liposuction__wrapper-2 > div {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 .liposuction__wrapper-2 .liposuction__desc span {
   color: #caaa51;
@@ -4345,8 +4607,23 @@ picture {
 .liposuction__wrapper-2 .liposuction__desc + .liposuction__desc {
   padding-top: 50px;
 }
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-2 .liposuction__desc + .liposuction__desc {
+    padding-top: 25px;
+  }
+}
 .liposuction__wrapper-2 .liposuction__desc + .liposuction__subtitle {
   padding-top: 100px;
+}
+@media screen and (max-width: 1279px) {
+  .liposuction__wrapper-2 .liposuction__desc + .liposuction__subtitle {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-2 .liposuction__desc + .liposuction__subtitle {
+    padding-top: 25px;
+  }
 }
 .liposuction__wrapper-3 {
   display: -webkit-box;
@@ -4354,13 +4631,39 @@ picture {
   display: flex;
   padding-bottom: 140px;
 }
+@media screen and (max-width: 1279px) {
+  .liposuction__wrapper-3 {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .liposuction__wrapper-3 {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-3 {
+    padding-bottom: 70px;
+  }
+}
 .liposuction__wrapper-3 > div {
   width: 50%;
   margin-left: auto;
   padding-left: 50px;
 }
+@media screen and (max-width: 1023px) {
+  .liposuction__wrapper-3 > div {
+    width: 100%;
+    padding-left: 0;
+  }
+}
 .liposuction__wrapper-4 {
   padding-bottom: 90px;
+}
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-4 {
+    padding-bottom: 50px;
+  }
 }
 .liposuction__wrapper-4 .liposuction__desc {
   width: 100%;
@@ -4373,6 +4676,8 @@ picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4381,8 +4686,26 @@ picture {
   width: 100%;
   max-width: calc((100% - 145px) / 2);
 }
+@media screen and (max-width: 1279px) {
+  .liposuction__wrapper-5 .liposuction__wrapper-left, .liposuction__wrapper-5 .liposuction__wrapper-right {
+    max-width: calc((100% - 70px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-5 .liposuction__wrapper-left, .liposuction__wrapper-5 .liposuction__wrapper-right {
+    max-width: 100%;
+  }
+  .liposuction__wrapper-5 .liposuction__wrapper-left:not(:last-of-type), .liposuction__wrapper-5 .liposuction__wrapper-right:not(:last-of-type) {
+    padding-bottom: 50px;
+  }
+}
 .liposuction__wrapper-5 .liposuction__desc:not(:last-of-type) {
   padding-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .liposuction__wrapper-5 .liposuction__desc:not(:last-of-type) {
+    padding-bottom: 25px;
+  }
 }
 .liposuction__title {
   padding-bottom: 20px;
@@ -4396,6 +4719,17 @@ picture {
   padding: 50px 75px;
   margin: 60px 0;
   background-color: #000;
+}
+@media screen and (max-width: 1279px) {
+  .liposuction__list {
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .liposuction__list {
+    margin: 50px 0;
+    padding: 25px;
+  }
 }
 .liposuction__list ul {
   display: -webkit-box;
@@ -4422,6 +4756,12 @@ picture {
   padding-top: 90px;
   padding-bottom: 90px;
 }
+@media screen and (max-width: 767px) {
+  .recovery {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 .recovery__bg {
   z-index: 0;
   position: absolute;
@@ -4437,6 +4777,11 @@ picture {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (max-width: 1535px) {
+  .recovery__bg svg {
+    opacity: 0.45;
+  }
+}
 .recovery__wrapper {
   z-index: 2;
   position: relative;
@@ -4444,11 +4789,26 @@ picture {
 .recovery__wrapper-1 {
   padding-bottom: 140px;
 }
+@media screen and (max-width: 1279px) {
+  .recovery__wrapper-1 {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recovery__wrapper-1 {
+    padding-bottom: 50px;
+  }
+}
 .recovery__wrapper-1 .recovery__desc {
   text-align: center;
 }
 .recovery__wrapper-1 .recovery__desc:not(:last-of-type) {
   padding-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .recovery__wrapper-1 .recovery__desc:not(:last-of-type) {
+    padding-bottom: 25px;
+  }
 }
 .recovery__wrapper-1 .recovery__desc-wrapper {
   width: 100%;
@@ -4460,14 +4820,34 @@ picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 90px;
 }
+@media screen and (max-width: 767px) {
+  .recovery__wrapper-2 {
+    padding-bottom: 50px;
+  }
+}
 .recovery__wrapper-2 .recovery__wrapper-left, .recovery__wrapper-2 .recovery__wrapper-right {
   width: 100%;
   max-width: calc((100% - 150px) / 2);
+}
+@media screen and (max-width: 1279px) {
+  .recovery__wrapper-2 .recovery__wrapper-left, .recovery__wrapper-2 .recovery__wrapper-right {
+    max-width: calc((100% - 100px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .recovery__wrapper-2 .recovery__wrapper-left, .recovery__wrapper-2 .recovery__wrapper-right {
+    max-width: 100%;
+  }
+  .recovery__wrapper-2 .recovery__wrapper-left:not(:last-of-type), .recovery__wrapper-2 .recovery__wrapper-right:not(:last-of-type) {
+    padding-bottom: 50px;
+  }
 }
 .recovery__title, .recovery__subtitle {
   padding-bottom: 20px;
@@ -4493,4 +4873,14 @@ picture {
 .recovery__block-wrapper > div {
   width: 100%;
   max-width: calc((100% - 150px) / 2);
+}
+@media screen and (max-width: 1279px) {
+  .recovery__block-wrapper > div {
+    max-width: calc((100% - 100px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .recovery__block-wrapper > div {
+    max-width: calc((100% - 20px) / 2);
+  }
 }
