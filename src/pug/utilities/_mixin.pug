@@ -14,6 +14,11 @@ mixin mainSection(classMod, gradientMod, img, title, breadcrumbsArr, anchorID)
           p.main__subtitle(data-aos="fade-up")
             span!= breadcrumbsArr
           h1.main__title.c-title.c-title--medium.c-title--center(data-aos="fade-up")!= title
+      else if(classMod === 'landing')
+        .main__content
+          p.main__subtitle(data-aos="fade-up")
+            span!= breadcrumbsArr
+          h1.main__title.c-title.c-title--medium.c-title--center(data-aos="fade-up")!= title
       else
         .main__content
           .main__breadcrumbs-wrapper(data-aos="fade-up")
@@ -25,9 +30,10 @@ mixin mainSection(classMod, gradientMod, img, title, breadcrumbsArr, anchorID)
                   a(href="#")!= val
           h1.main__title.c-title.c-title--medium.c-title--center(data-aos="fade-up" class!= (gradientMod == 'black')?'main__title--white':'')!= title
 
-      .main__btn(data-aos="fade-up" data-aos-offset="0")
-        a(href!= "#" + anchorID anchor-js)
-          span EXPLORE MORE
-          i.icon-font.icon-arrow-left
+      if(classMod !== 'landing')
+        .main__btn(data-aos="fade-up" data-aos-offset="0")
+          a(href!= "#" + anchorID anchor-js)
+            span EXPLORE MORE
+            i.icon-font.icon-arrow-left
 
 //- MIXIN :: END

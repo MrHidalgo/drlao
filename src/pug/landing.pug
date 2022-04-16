@@ -1,0 +1,17 @@
+---
+title: William Lao, MD | Landing
+
+pageClassName: p-landing
+---
+extends shared/_layout
+
+block content
+  main(class!= pageClassName)
+
+    +mainSection('landing', 'white', 'img-home-bg.jpg', 'OVER 10 YEARS OF EXPERIENCE', 'MD JOHNS HOPKINS UNIVERSITY WITH', '')
+
+    include components/landing/state
+    include components/landing/doctors
+    include components/landing/before-after
+    include components/landing/schedule
+    include components/landing/reviews

@@ -101,6 +101,15 @@
       padding-bottom: 50px;
     }
   }
+
+  &__btn {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-left: 20px;
+    }
+  }
 }
 
 // SECTION :: END

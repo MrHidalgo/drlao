@@ -17,16 +17,19 @@ nav#header.header
 
       .header__wrapper-right
 
-        .header__action
-          div
-
-            nav.header__lang
-              a.is-active(href="#") EN
-              span |
-              a(href="#") CN
-              span |
-              a(href="#") JP
-          div
-            +hamburger
+        if(pageClassName == 'p-landing')
+          .header__rating
+            img(src="img/img-landing-header-rating.png" srcset="img/img-landing-header-rating@2x.png 2x" alt="")
+        else
+          .header__action
+            div
+              nav.header__lang
+                a.is-active(href="#") EN
+                span |
+                a(href="#") CN
+                span |
+                a(href="#") JP
+            div
+              +hamburger
 
 // HEADER :: END

@@ -146,6 +146,16 @@
       }
     }
   }
+
+  &__info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #000;
+  }
 }
 
 // SECTION :: END

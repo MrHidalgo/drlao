@@ -3,6 +3,14 @@
 .main {
 	position: relative;
 
+  &.main--landing {
+    .main {
+      &__wrapper {
+        height: 600px;
+      }
+    }
+  }
+
 	&__bg {
     z-index: 0;
 		position: absolute;

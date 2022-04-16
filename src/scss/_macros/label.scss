@@ -5,6 +5,8 @@
   font-size: 15px;
   text-align: center;
   color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   @include adaptive(767) {
     font-size: 12px;
   }

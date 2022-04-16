@@ -151,6 +151,7 @@ var GalerryCB = function () {
 __webpack_require__.r(__webpack_exports__);
 var Hamburger = function () {
   var init = function init() {
+    if (!document.querySelector('[hamburger-js]')) return;
     document.querySelector('[hamburger-js]').addEventListener('click', function (ev) {
       var el = ev.currentTarget,
           documentMainTags = document.querySelectorAll('html, body'),

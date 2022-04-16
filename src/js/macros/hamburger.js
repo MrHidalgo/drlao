@@ -1,6 +1,8 @@
 const Hamburger = (function() {
   const init = function() {
 
+    if(!document.querySelector('[hamburger-js]')) return;
+
     document.querySelector('[hamburger-js]').addEventListener('click', (ev) => {
 
       const el = ev.currentTarget,

@@ -1,0 +1,39 @@
+// SECTION :: START
+
+section#reviews.reviews
+  .c-grid
+
+    p.reviews__label.c-label(data-aos="fade-up") Don’t just take our word for it
+    h2.reviews__title.c-title.c-title--center(data-aos="fade-up") What Our Patients Say
+
+  .reviews__carousel
+
+    .swiper(data-aos="fade-up")
+      .swiper-wrapper
+        each val, idx in [1,2,3,4,5,6,7,8,9,0]
+          .swiper-slide
+
+            .reviews__box
+              p.reviews__box-desc.c-desc *Dr.William Lao’s is definitely awesome. I did my nose surgery there. Dr. Lao’s incredible skill is that after his surgery, nobody can even notice you did anything but they all think you look better. For me, that is the hardest part of plastic surgery.  Also, the recovery process is almost no pain. I can go back to work in the second week after surgery. He is also a very nice and humorous person. He made me feel the only thing you need is to trust him, and no need to worry about the results. It will look natural and pretty. I hope Dr. Lao can open another office on the west coast so we don’t need to fly there lol!
+              .reviews__box-rating
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+                i.icon-font.icon-star
+              p.reviews__box-from S, 18, Student, Hispanic, New York, USA
+
+    .swiper-pagination(data-aos="fade-up")
+
+    a.reviews__carousel-btn.reviews__carousel-btn--prev(href="#" data-aos="fade-up")
+      i.icon-font.icon-arrow-left
+    a.reviews__carousel-btn.reviews__carousel-btn--next(href="#" data-aos="fade-up")
+      i.icon-font.icon-arrow-left
+
+    p.reviews__info(data-aos="fade-up") Disclaimer: * Results may vary from person to person
+
+    .c-btn__wrapper.c-btn__wrapper--center(data-aos="fade-up")
+      a.c-btn(href="#")
+        span READ MORE PATIENT TESTIMONIALS
+
+// SECTION :: END

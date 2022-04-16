@@ -551,6 +551,8 @@ picture {
   font-size: 15px;
   text-align: center;
   color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
   .c-label {
@@ -1598,6 +1600,9 @@ picture {
 .main {
   position: relative;
 }
+.main.main--landing .main__wrapper {
+  height: 600px;
+}
 .main__bg {
   z-index: 0;
   position: absolute;
@@ -2406,6 +2411,15 @@ picture {
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
+.reviews__info {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #000;
+}
 
 .schedule {
   position: relative;
@@ -3136,6 +3150,9 @@ picture {
     padding-left: 0;
   }
 }
+.state__label {
+  text-align: left;
+}
 .state__title {
   padding-bottom: 20px;
 }
@@ -3145,6 +3162,34 @@ picture {
 @media screen and (max-width: 767px) {
   .state__desc {
     padding-bottom: 50px;
+  }
+}
+.state__btn:not(:last-of-type) {
+  margin-right: 30px;
+}
+@media screen and (max-width: 767px) {
+  .state__btn:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.state__btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .state__btn-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -5092,6 +5137,12 @@ picture {
     padding-right: 0;
     padding-bottom: 50px;
   }
+}
+.doctors__btn img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: 20px;
 }
 
 .meet {
