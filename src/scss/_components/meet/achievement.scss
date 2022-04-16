@@ -4,13 +4,31 @@
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #000000;
+  @include adaptive(767) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
 
     &-left {
       width: 100%;
       max-width: 630px;
+      @include adaptive(1535) {
+        max-width: 555px;
+      }
+      @include adaptive(1365) {
+        max-width: 500px;
+      }
+      @include adaptive(1279) {
+        max-width: 50%;
+      }
+      @include adaptive(767) {
+        max-width: 100%;
+        padding-bottom: 25px;
+      }
     }
 
     &-right {
@@ -18,6 +36,12 @@
       min-width: 1px;
       max-width: 100%;
       padding-left: 90px;
+      @include adaptive(1279) {
+        padding-left: 50px;
+      }
+      @include adaptive(767) {
+        padding-left: 0;
+      }
     }
   }
 
@@ -36,6 +60,22 @@
       color: #383838;
       @include transition(color);
       @include hoverLink(#d6ab49);
+      @include adaptive(1535) {
+        font-size: 40px;
+        line-height: 80px;
+      }
+      @include adaptive(1365) {
+        font-size: 35px;
+        line-height: 50px;
+      }
+      @include adaptive(1023) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+      @include adaptive(767) {
+        font-size: 22px;
+        line-height: 30px;
+      }
 
       &:not(:last-of-type) {
         margin-bottom: 25px;
@@ -60,6 +100,9 @@
         line-height: 1.4;
         color: #383838;
         @include transition(color);
+        @include adaptive(767) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -89,6 +132,20 @@
         letter-spacing: 0.02em;
         line-height: 40px;
         color: #fff;
+        @include adaptive(1365) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+        @include adaptive(1023) {
+          font-size: 16px;
+          line-height: 25px;
+        }
+        @include adaptive(767) {
+          min-height: 60px;
+          padding: 10px;
+          font-size: 14px;
+          line-height: normal;
+        }
 
         &:not(:last-of-type) {
           border-bottom: 1px solid #707070;
