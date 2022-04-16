@@ -4321,11 +4321,47 @@ picture {
   padding-top: 180px;
   padding-bottom: 90px;
 }
+@media screen and (max-width: 1535px) {
+  .facelift {
+    padding-top: 140px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .facelift {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .facelift {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 .facelift__container {
   position: relative;
 }
+@media screen and (max-width: 1023px) {
+  .facelift__container-1 {
+    padding-bottom: 50px;
+  }
+}
 .facelift__container-2 {
   padding-bottom: 120px;
+}
+@media screen and (max-width: 1439px) {
+  .facelift__container-2 {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .facelift__container-2 {
+    padding-bottom: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .facelift__container-2 {
+    padding-bottom: 50px;
+  }
 }
 .facelift__bg {
   position: absolute;
@@ -4333,6 +4369,13 @@ picture {
   right: 0;
   width: 50%;
   height: calc(100% - 120px);
+}
+@media screen and (max-width: 1023px) {
+  .facelift__bg {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
 }
 .facelift__bg img {
   display: block;
@@ -4355,12 +4398,41 @@ picture {
   padding-right: 50px;
   padding-bottom: 220px;
 }
+@media screen and (max-width: 1535px) {
+  .facelift__wrapper-1 > div {
+    padding-top: 100px;
+    padding-bottom: 180px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .facelift__wrapper-1 > div {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .facelift__wrapper-1 > div {
+    width: 100%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .facelift__wrapper-1 > div {
+    padding-bottom: 50px;
+  }
+}
 .facelift__wrapper-1 .facelift__desc {
   width: 100%;
   max-width: 810px;
 }
 .facelift__wrapper-1 .facelift__desc:not(:last-of-type) {
   padding-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .facelift__wrapper-1 .facelift__desc:not(:last-of-type) {
+    padding-bottom: 25px;
+  }
 }
 .facelift__wrapper-2 .facelift__desc {
   width: 100%;
@@ -4391,10 +4463,17 @@ picture {
   padding: 35px 50px;
   background-color: #000000;
 }
+@media screen and (max-width: 767px) {
+  .facelift__box {
+    padding: 25px 20px;
+  }
+}
 .facelift__box-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4402,6 +4481,11 @@ picture {
 .facelift__box-wrapper > div {
   width: 100%;
   max-width: calc((100% - 15px) / 2);
+}
+@media screen and (max-width: 767px) {
+  .facelift__box-wrapper > div {
+    max-width: 100%;
+  }
 }
 .facelift__box-title {
   padding-bottom: 20px;

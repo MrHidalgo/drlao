@@ -3,12 +3,37 @@
 .facelift {
   padding-top: 180px;
   padding-bottom: 90px;
+  @include adaptive(1535) {
+    padding-top: 140px;
+  }
+  @include adaptive(1023) {
+    padding-top: 100px;
+  }
+  @include adaptive(767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   &__container {
     position: relative;
 
+    &-1 {
+      @include adaptive(1023) {
+        padding-bottom: 50px;
+      }
+    }
+
     &-2 {
       padding-bottom: 120px;
+      @include adaptive(1439) {
+        padding-bottom: 100px;
+      }
+      @include adaptive(1279) {
+        padding-bottom: 70px;
+      }
+      @include adaptive(767) {
+        padding-bottom: 50px;
+      }
     }
   }
 
@@ -18,6 +43,11 @@
     right: 0;
     width: 50%;
     height: calc(100% - 120px);
+    @include adaptive(1023) {
+      position: static;
+      width: 100%;
+      height: auto;
+    }
 
     img {
       display: block;
@@ -38,6 +68,22 @@
         padding-top: 120px;
         padding-right: 50px;
         padding-bottom: 220px;
+        @include adaptive(1535) {
+          padding-top: 100px;
+          padding-bottom: 180px;
+        }
+        @include adaptive(1279) {
+          padding-bottom: 140px;
+        }
+        @include adaptive(1023) {
+          width: 100%;
+          padding-top: 0;
+          padding-right: 0;
+          padding-bottom: 100px;
+        }
+        @include adaptive(767) {
+          padding-bottom: 50px;
+        }
       }
 
       .facelift__desc {
@@ -46,6 +92,9 @@
 
         &:not(:last-of-type) {
           padding-bottom: 50px;
+          @include adaptive(767) {
+            padding-bottom: 25px;
+          }
         }
       }
     }
@@ -80,14 +129,21 @@
     min-height: 100%;
     padding: 35px 50px;
     background-color: #000000;
+    @include adaptive(767) {
+      padding: 25px 20px;
+    }
 
     &-wrapper {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       > div {
         width: 100%;
         max-width: calc((100% - 15px) / 2);
+        @include adaptive(767) {
+          max-width: 100%;
+        }
       }
     }
 
