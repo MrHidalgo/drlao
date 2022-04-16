@@ -4,10 +4,21 @@ const Hamburger = (function() {
     document.querySelector('[hamburger-js]').addEventListener('click', (ev) => {
 
       const el = ev.currentTarget,
-        documentMainTags = document.querySelectorAll('html, body');
+        documentMainTags = document.querySelectorAll('html, body'),
+        mobileContainer = document.querySelector("[mobile-block-js]");
+
+      el.classList.toggle('is-active');
+
+      if(mobileContainer.classList.contains("is-open")) {
+        mobileContainer.classList.remove("is-open");
+        mobileContainer.classList.add("is-animated");
+
+        setTimeout(() => mobileContainer.classList.remove("is-animated"), 300);
+      } else {
+        mobileContainer.classList.add("is-open");
+      }
 
       documentMainTags.forEach((val, idx) => val.classList.toggle('is-hideScroll'));
-      el.classList.toggle('is-active');
 
     }, false);
 

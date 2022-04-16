@@ -1,7 +1,86 @@
 // SECTION :: START
 
-section#menu.menu
-  .c-grid
+section#menu.menu(mobile-block-js)
+
+  .menu__overlay
+  .menu__container
+
     .menu__wrapper
+      .menu__wrapper-top
+
+        .logo.logo--header
+          a.logo__btn(href="#")
+            img(src="img/logo.svg" alt="")
+
+      .menu__wrapper-middle
+        div
+
+          nav.menu__btn-wrapper
+            a.menu__btn.is-active(href="#" data-id='1')
+              span ABOUT
+              //i.icon-font.icon-corner
+            a.menu__btn(href="#" data-id='2')
+              span PROCEDURES
+              //i.icon-font.icon-corner
+            a.menu__btn(href="#" data-id='3')
+              span MEDSPA
+              //i.icon-font.icon-corner
+            a.menu__btn(href="#" data-id='4')
+              span GALLERY
+              //i.icon-font.icon-corner
+            a.menu__btn(href="#" data-id='5')
+              span RESOURCES
+              //i.icon-font.icon-corner
+            a.menu__btn(href="#" data-id='6')
+              span CONTACT
+              //i.icon-font.icon-corner
+
+        div
+
+      .menu__wrapper-bottom
+        div
+
+          .header__info
+            p NEW YORK, NY
+            a(href="tel:929-505-2060") 929-505-2060
+
+
+        div
+          .footer__follow
+            p FOLLOW US
+            ul
+              li
+                a(href="#")
+                  i.icon-font.icon-facebook
+              li
+                a(href="#")
+                  i.icon-font.icon-linkedin
+              li
+                a(href="#")
+                  i.icon-font.icon-follow-1
+              li
+                a(href="#")
+                  i.icon-font.icon-youtube
+              li
+                a(href="#")
+                  i.icon-font.icon-instagram
+              li
+                a(href="#")
+                  i.icon-font.icon-message
+              li
+                a(href="#")
+                  i.icon-font.icon-is
+              li
+                a(href="#")
+                  i.icon-font.icon-follow-2
+              li
+                a(href="#")
+                  i.icon-font.icon-line
+              li
+                a(href="#")
+                  i.icon-font.icon-follow-3
+              li
+                a(href="#")
+                  i.icon-font.icon-follow-4
 
 // SECTION :: END

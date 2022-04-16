@@ -153,11 +153,23 @@ var Hamburger = function () {
   var init = function init() {
     document.querySelector('[hamburger-js]').addEventListener('click', function (ev) {
       var el = ev.currentTarget,
-          documentMainTags = document.querySelectorAll('html, body');
+          documentMainTags = document.querySelectorAll('html, body'),
+          mobileContainer = document.querySelector("[mobile-block-js]");
+      el.classList.toggle('is-active');
+
+      if (mobileContainer.classList.contains("is-open")) {
+        mobileContainer.classList.remove("is-open");
+        mobileContainer.classList.add("is-animated");
+        setTimeout(function () {
+          return mobileContainer.classList.remove("is-animated");
+        }, 300);
+      } else {
+        mobileContainer.classList.add("is-open");
+      }
+
       documentMainTags.forEach(function (val, idx) {
         return val.classList.toggle('is-hideScroll');
       });
-      el.classList.toggle('is-active');
     }, false);
   };
 
