@@ -3,8 +3,8 @@
 
 mixin gallerySlider(classMod, title, arrImgName, arrBtnName)
   .gallery__carousel(class!= 'gallery__carousel-' + classMod)
-    h3.gallery__carousel-title.c-title.c-title--gold!= title
-    .swiper
+    h3.gallery__carousel-title.c-title.c-title--gold(data-aos="fade-up")!= title
+    .swiper(data-aos="fade-up")
       .swiper-wrapper
         each val, idx in arrImgName
           .swiper-slide
@@ -16,15 +16,15 @@ mixin gallerySlider(classMod, title, arrImgName, arrBtnName)
 
 section#gallery.gallery
 
-  .gallery__bg
+  .gallery__bg(svg-js)
     svg(xmlns='http://www.w3.org/2000/svg' width='1648.2' height='145' viewBox='0 0 1648.2 145')
       path#Path_57(data-name='Path 57' d='M-818-3.8A3.8,3.8,0,0,0-814.2,0h47c25.2,0,43.6-16.2,43.6-38.6,0-18.4-14.4-28.2-25-32.6,9.4-5.4,20.8-16.4,20.8-31.8,0-21-17.4-37-41.6-37h-44.8a3.8,3.8,0,0,0-3.8,3.8Zm20.4-75.4v-42h27c12.8,0,20.6,8.4,20.6,20.6,0,12-7.8,21.4-20.6,21.4Zm-.2,60.8V-61.2h27.4c13,0,24.6,8.8,24.6,21,0,12.4-9.4,21.8-21.6,21.8ZM-693.6-3.8A3.8,3.8,0,0,0-689.8,0h80A3.8,3.8,0,0,0-606-3.8v-11a3.8,3.8,0,0,0-3.8-3.8H-673v-43h53.4a3.8,3.8,0,0,0,3.8-3.8V-76.6a3.934,3.934,0,0,0-3.8-3.8H-673v-40.8h63.2A3.8,3.8,0,0,0-606-125v-11.2a3.8,3.8,0,0,0-3.8-3.8h-80a3.8,3.8,0,0,0-3.8,3.8Zm117.8,0A3.8,3.8,0,0,0-572,0h13a3.934,3.934,0,0,0,3.8-3.8V-56.4h53.4a3.934,3.934,0,0,0,3.8-3.8v-11a3.934,3.934,0,0,0-3.8-3.8h-53.4v-46.2H-492a3.8,3.8,0,0,0,3.8-3.8v-11.2A3.8,3.8,0,0,0-492-140h-80a3.8,3.8,0,0,0-3.8,3.8Zm103-66A71.362,71.362,0,0,0-401,2a71.531,71.531,0,0,0,72-71.8A71.871,71.871,0,0,0-401-142,71.7,71.7,0,0,0-472.8-69.8Zm20,0c0-28.4,23.4-52.2,51.8-52.2,28.6,0,52,23.8,52,52.2A51.982,51.982,0,0,1-401-18,51.939,51.939,0,0,1-452.8-69.8Zm152.4,66A3.8,3.8,0,0,0-296.6,0h13a3.934,3.934,0,0,0,3.8-3.8v-51h30.2l26.6,53A3.682,3.682,0,0,0-219.8,0h15.6c3.4,0,4.8-3.2,3.4-5.8l-27.4-50.8c17.4-7,29.6-22.2,29.6-40.6,0-23.8-19.6-42.8-43.6-42.8h-54.4a3.8,3.8,0,0,0-3.8,3.8Zm21-68.2v-48.6h35.6c13,0,24.4,10.8,24.4,23.8,0,13.8-11.4,24.8-24.4,24.8Zm112,68.2A3.8,3.8,0,0,0-163.6,0h80a3.8,3.8,0,0,0,3.8-3.8v-11a3.8,3.8,0,0,0-3.8-3.8h-63.2v-43h53.4a3.8,3.8,0,0,0,3.8-3.8V-76.6a3.934,3.934,0,0,0-3.8-3.8h-53.4v-40.8h63.2a3.8,3.8,0,0,0,3.8-3.8v-11.2a3.8,3.8,0,0,0-3.8-3.8h-80a3.8,3.8,0,0,0-3.8,3.8ZM25.4-30.6A3.76,3.76,0,0,0,29.2-27h8.4a3.76,3.76,0,0,0,3.8-3.6V-61.2H72.2A3.76,3.76,0,0,0,75.8-65v-8.4a3.76,3.76,0,0,0-3.6-3.8H41.4v-31a3.76,3.76,0,0,0-3.8-3.6H29.2a3.76,3.76,0,0,0-3.8,3.6v31H-5.4a3.934,3.934,0,0,0-3.8,3.8V-65a3.934,3.934,0,0,0,3.8,3.8H25.4ZM139.6,0h12.6a5.027,5.027,0,0,0,4.6-3c4-9.2,8.2-18.2,12.2-27.4h65.4L246.8-3a4.659,4.659,0,0,0,4.6,3H264a3.531,3.531,0,0,0,3.4-5.2l-61-134.6A4.679,4.679,0,0,0,203-142h-2a4.679,4.679,0,0,0-3.4,2.2L136.2-5.2A3.531,3.531,0,0,0,139.6,0Zm37.2-47.6,24.4-54.8h1l24.6,54.8ZM287.4-3.8A3.8,3.8,0,0,0,291.2,0h13A3.934,3.934,0,0,0,308-3.8V-56.4h53.4a3.934,3.934,0,0,0,3.8-3.8v-11a3.934,3.934,0,0,0-3.8-3.8H308v-46.2h63.2A3.8,3.8,0,0,0,375-125v-11.2a3.8,3.8,0,0,0-3.8-3.8h-80a3.8,3.8,0,0,0-3.8,3.8Zm132.4,0A3.934,3.934,0,0,0,423.6,0h13.2a3.934,3.934,0,0,0,3.8-3.8V-121.2h32.6A3.8,3.8,0,0,0,477-125v-11.2a3.8,3.8,0,0,0-3.8-3.8h-86a3.8,3.8,0,0,0-3.8,3.8V-125a3.8,3.8,0,0,0,3.8,3.8h32.6Zm78.8,0A3.8,3.8,0,0,0,502.4,0h80a3.8,3.8,0,0,0,3.8-3.8v-11a3.8,3.8,0,0,0-3.8-3.8H519.2v-43h53.4a3.8,3.8,0,0,0,3.8-3.8V-76.6a3.934,3.934,0,0,0-3.8-3.8H519.2v-40.8h63.2a3.8,3.8,0,0,0,3.8-3.8v-11.2a3.8,3.8,0,0,0-3.8-3.8h-80a3.8,3.8,0,0,0-3.8,3.8Zm117.8,0A3.8,3.8,0,0,0,620.2,0h13A3.934,3.934,0,0,0,637-3.8v-51h30.2l26.6,53A3.682,3.682,0,0,0,697,0h15.6c3.4,0,4.8-3.2,3.4-5.8L688.6-56.6c17.4-7,29.6-22.2,29.6-40.6,0-23.8-19.6-42.8-43.6-42.8H620.2a3.8,3.8,0,0,0-3.8,3.8Zm21-68.2v-48.6H673c13,0,24.4,10.8,24.4,23.8C697.4-83,686-72,673-72ZM741.6-13.8c3.2,3,18.6,15.8,43,15.8,26,0,44.6-17,44.6-37.8,0-24.4-19.8-35.4-43-44.8-16.6-6.8-25.4-13.8-25.4-25.2,0-7.4,5.8-18,22.6-18,11.6,0,25.6,9.2,27,10,2.8,1.8,5.4.6,7-2,1.6-2.4,3.4-5.2,5-7.6a4.752,4.752,0,0,0-1.2-6.8c-2-1.4-17-11.8-37-11.8-31.8,0-43.8,21.4-43.8,37,0,23.2,16,33.8,36.4,42.4C796.6-54.4,807-46.8,807-34.8c0,10.2-8.8,18.6-22.6,18.6-15.4,0-30.8-12.8-32-13.8-2.2-1.8-5-1-6.8,1.6s-3.4,5.6-5.2,8.2C738.4-16.8,739.8-15.4,741.6-13.8Z' transform='translate(818.5 142.5)' fill='none' stroke='#caaa51' stroke-width='1')
 
   .c-grid
     .gallery__wrapper.gallery__wrapper-1
 
-      h2.gallery__title.c-title.c-title--center!= "CHOOSE A <br>PROCEDURE"
-      p.gallery__desc.c-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum sed nunc a ultrices. Mauris porttitor diam quis risus porta, vel viverra enim accumsan. Maecenas dignissim enim eget ante lobortis ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fermentum tempor mauris ut elementum. Sed at arcu in libero ullamcorper malesuada nec vel augue. Cras dapibus urna suscipit elit facilisis lacinia. Integer at ipsum varius, dictum sem nec, tempor arcu.
+      h2.gallery__title.c-title.c-title--center(data-aos="fade-up")!= "CHOOSE A <br>PROCEDURE"
+      p.gallery__desc.c-desc(data-aos="fade-up") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum sed nunc a ultrices. Mauris porttitor diam quis risus porta, vel viverra enim accumsan. Maecenas dignissim enim eget ante lobortis ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fermentum tempor mauris ut elementum. Sed at arcu in libero ullamcorper malesuada nec vel augue. Cras dapibus urna suscipit elit facilisis lacinia. Integer at ipsum varius, dictum sem nec, tempor arcu.
 
   .gallery__wrapper.gallery__wrapper-2
 

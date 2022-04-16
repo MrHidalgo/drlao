@@ -3,12 +3,12 @@
 section#reviews.reviews
   .c-grid
 
-    p.reviews__label.c-label REAL PATIENTS
-    h2.reviews__title.c-title.c-title--center REAL REVIEWS
+    p.reviews__label.c-label(data-aos="fade-up") REAL PATIENTS
+    h2.reviews__title.c-title.c-title--center(data-aos="fade-up") REAL REVIEWS
 
   .reviews__carousel
 
-    .swiper
+    .swiper(data-aos="fade-up")
       .swiper-wrapper
         each val, idx in [1,2,3,4,5,6,7,8,9,0]
           .swiper-slide
@@ -23,11 +23,11 @@ section#reviews.reviews
                 i.icon-font.icon-star
               p.reviews__box-from S, 18, Student, Hispanic, New York, USA
 
-    .swiper-pagination
+    .swiper-pagination(data-aos="fade-up")
 
-    a.reviews__carousel-btn.reviews__carousel-btn--prev(href="#")
+    a.reviews__carousel-btn.reviews__carousel-btn--prev(href="#" data-aos="fade-up")
       i.icon-font.icon-arrow-left
-    a.reviews__carousel-btn.reviews__carousel-btn--next(href="#")
+    a.reviews__carousel-btn.reviews__carousel-btn--next(href="#" data-aos="fade-up")
       i.icon-font.icon-arrow-left
 
 // SECTION :: END

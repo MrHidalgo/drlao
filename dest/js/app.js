@@ -474,6 +474,23 @@ window.addEventListener('load', function (ev) {
   _macros_gallery__WEBPACK_IMPORTED_MODULE_6__["default"].init();
   _macros_achievementToggle__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   _macros_faq__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+  /* PARALLAX EFFECT FOR SVG TEXT */
+
+  gsap.to("[svg-js] svg", {
+    scrollTrigger: {
+      scrub: true
+    },
+    y: function y(i, target) {
+      return -ScrollTrigger.maxScroll(window) * -0.025;
+    },
+    ease: "none"
+  });
+  /* SCROLL WOW ANIMATION */
+
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

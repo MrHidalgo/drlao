@@ -31,6 +31,21 @@ window.addEventListener('load', (ev) => {
   AchievementToggle.init();
   FaqToggle.init();
 
+  /* PARALLAX EFFECT FOR SVG TEXT */
+  gsap.to("[svg-js] svg", {
+    scrollTrigger: {
+      scrub: true
+    },
+    y: (i, target) => -ScrollTrigger.maxScroll(window) * (-0.025),
+    ease: "none"
+  });
+
+  /* SCROLL WOW ANIMATION */
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
 }, false);
 
 
