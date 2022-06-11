@@ -10,6 +10,8 @@ import Medical from "./macros/medical";
 import AchievementToggle from "./macros/achievementToggle";
 import FaqToggle
   from "./macros/faq";
+import MenuToggle
+  from "./macros/menuToggle";
 
 
 // EVENT LISTENER - LOAD
@@ -30,6 +32,7 @@ window.addEventListener('load', (ev) => {
   GalerryCB.init();
   AchievementToggle.init();
   FaqToggle.init();
+  MenuToggle.init();
 
   /* PARALLAX EFFECT FOR SVG TEXT */
   gsap.to("[svg-js] svg", {

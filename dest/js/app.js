@@ -329,6 +329,43 @@ var Medical = function () {
 
 /***/ }),
 
+/***/ "./src/js/macros/menuToggle.js":
+/*!*************************************!*\
+  !*** ./src/js/macros/menuToggle.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var MenuToggle = function () {
+  var init = function init() {
+    $('.menu__btn').hover(function (ev) {
+      var el = $(ev.currentTarget),
+          elID = el.attr('data-id');
+
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        el.addClass('is-hover');
+        $('.menu__content').hide();
+        $('.menu__content[data-content-id="' + elID + '"]').fadeIn(500);
+      }
+    }, function (ev) {});
+    $('.menu__link-wrapper').hover(function (ev) {}, function (ev) {
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        $('.menu__content').hide();
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (MenuToggle);
+
+/***/ }),
+
 /***/ "./src/js/macros/reviews.js":
 /*!**********************************!*\
   !*** ./src/js/macros/reviews.js ***!
@@ -450,6 +487,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_medical__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./macros/medical */ "./src/js/macros/medical.js");
 /* harmony import */ var _macros_achievementToggle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./macros/achievementToggle */ "./src/js/macros/achievementToggle.js");
 /* harmony import */ var _macros_faq__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./macros/faq */ "./src/js/macros/faq.js");
+/* harmony import */ var _macros_menuToggle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./macros/menuToggle */ "./src/js/macros/menuToggle.js");
+
 
 
 
@@ -475,6 +514,7 @@ window.addEventListener('load', function (ev) {
   _macros_gallery__WEBPACK_IMPORTED_MODULE_6__["default"].init();
   _macros_achievementToggle__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   _macros_faq__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+  _macros_menuToggle__WEBPACK_IMPORTED_MODULE_10__["default"].init();
   /* PARALLAX EFFECT FOR SVG TEXT */
 
   gsap.to("[svg-js] svg", {
